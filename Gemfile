@@ -12,9 +12,12 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman-sprockets', '>= 4.0.0.rc.1'
 gem 'middleman', '>= 4.0.0.rc.1'
 
-# Sass Rails
+# Sass
 gem 'sass-rails'
 gem 'sass-globbing', '~> 1.1', '>= 1.1.1'
+
+# Middleman Bower
+gem 'middleman-bower'
 
 # Livereload
 gem 'middleman-livereload'
@@ -24,9 +27,6 @@ gem 'bootstrap', '>=4.0.0.alpha1'
 
 # Automatically add vendor prefixes to CSS rules in stylesheets
 gem 'middleman-autoprefixer'
-
-# Adds jQuery
-gem 'jquery-middleman'
 
 # Font Awesome
 gem 'font-awesome-sass'

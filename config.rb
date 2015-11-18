@@ -34,6 +34,8 @@ configure :development do
   # Middleman autoprefixer
   activate :autoprefixer
   
+  # Bower
+  activate :bower  
 end
 
 # Methods defined in the helpers block are available in templates

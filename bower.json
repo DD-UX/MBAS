@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap4-test",
+  "homepage": "yes",
+  "authors": [
+    "Diego Díaz <diego.diaz@warrg.com>"
+  ],
+  "description": "Middlemam based project with Bootstrap 4",
+  "main": "bootstrap4-test",
+  "moduleType": [],
+  "license": "yes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  }
+}
