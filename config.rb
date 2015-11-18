@@ -33,9 +33,6 @@ configure :development do
 
   # Middleman autoprefixer
   activate :autoprefixer
-  
-  # Bower
-  activate :bower  
 end
 
 # Methods defined in the helpers block are available in templates
@@ -67,8 +64,27 @@ end
 
 after_configuration do
   sprockets.append_path 'app'
+  
+  # Bower files
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+  
+  puts ' -- BOWER Path: \'' + @bower_config["directory"] + '\' --'
+  puts ''  
+  puts 'Include BOWER files with Asset Pipelines:'
+  puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
+  puts ''  
+  puts 'CSS:'  
+  puts '/*'
+  puts ' *= require your/dist/css'
+  puts ' */'
+  puts ' at \'source/assets/sass/styles.css.scss\''
+  puts ''
+  puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 end
 
-puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-puts "        Bootstrap 4 Alpha - Test"
-puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+puts ''
+puts '        Bootstrap 4 Alpha - Test'
+puts ''
+
