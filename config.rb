@@ -69,7 +69,8 @@ after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
   
-  puts ' -- BOWER Path: \'' + @bower_config["directory"] + '\' --'
+  puts '----------------------------------------'
+  puts 'BOWER Path: \'' + @bower_config["directory"] + '\''
   puts ''  
   puts 'Include BOWER files with Asset Pipelines:'
   puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
@@ -79,6 +80,7 @@ after_configuration do
   puts ' *= require your/dist/css'
   puts ' */'
   puts ' at \'source/assets/sass/styles.css.scss\''
+  puts '----------------------------------------'
   puts ''
   puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 end
