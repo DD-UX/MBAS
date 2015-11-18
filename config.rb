@@ -24,9 +24,17 @@ page '/*.txt', layout: false
 ###
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  # Create Livereload
+  activate :livereload
+  
+  # Create pretty urls
+  activate :directory_indexes
+
+  # Middleman autoprefixer
+  activate :autoprefixer
+  
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -35,11 +43,30 @@ page '/*.txt', layout: false
 #   end
 # end
 
+config[:css_dir] = 'assets/sass'
+config[:js_dir] = 'assets/js'
+config[:images_dir] = 'assets/images'
+config[:app_dir] = 'app'
+
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
+	# Activate minify HTML
+	activate :minify_html
+
+  # For example, change the Compass output style for deployment
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  #Gzip compression
+  activate :gzip
 end
+
+after_configuration do
+  sprockets.append_path 'app'
+end
+
+puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+puts "        Bootstrap 4 Alpha - Test"
+puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
