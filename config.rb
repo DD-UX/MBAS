@@ -33,6 +33,11 @@ configure :development do
 
   # Middleman autoprefixer
   activate :autoprefixer
+  
+  Dir.glob("#{root}/source/app/*/*.erb") do |html_file|
+    # do work on files ending in .html in the desired directory
+    puts "#{html_file}"
+  end
 end
 
 # Methods defined in the helpers block are available in templates
@@ -69,24 +74,24 @@ after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
   
-  puts '----------------------------------------'
-  puts 'BOWER Path: \'' + @bower_config["directory"] + '\''
-  puts ''  
-  puts 'Include BOWER files with Asset Pipelines:'
-  puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
-  puts ''  
-  puts 'CSS:'  
-  puts '/*'
-  puts ' *= require your/dist/css'
-  puts ' */'
-  puts ' at \'source/assets/sass/styles.css.scss\''
-  puts '----------------------------------------'
-  puts ''
+#  puts '----------------------------------------'
+#  puts 'BOWER Path: \'' + @bower_config["directory"] + '\''
+#  puts ''  
+#  puts 'Include BOWER files with Asset Pipelines:'
+#  puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
+#  puts ''  
+#  puts 'CSS:'  
+#  puts '/*'
+#  puts ' *= require your/dist/css'
+#  puts ' */'
+#  puts ' at \'source/assets/sass/styles.css.scss\''
+#  puts '----------------------------------------'
+#  puts ''
   puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 end
 
 puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
-puts ''
-puts '        Bootstrap 4 Alpha - Test'
-puts ''
+#puts ''
+#puts '        Bootstrap 4 Alpha - Test'
+#puts ''
 
