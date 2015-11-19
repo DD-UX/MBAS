@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+// Bootstrap override variables
+@import '_bootstrap-variables';
+  
 // Bootstrap: http://getbootstrap.com/
 @import 'bootstrap';
 
@@ -10,11 +13,8 @@
 @import 'font-awesome';
 
 
-body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+body {  
+  
 }
 
 
