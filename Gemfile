@@ -14,7 +14,7 @@ gem 'middleman', '>= 4.0.0.rc.1'
 
 # Sass
 gem 'sass-rails'
-gem 'sass-globbing'
+gem 'sass-globbing', '~> 1.1', '>= 1.1.1'
 
 # Livereload
 gem 'middleman-livereload'

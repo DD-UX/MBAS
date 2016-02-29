@@ -1,0 +1,78 @@
+/**
+ * General Styles space to override properties coming straight from Bootstrap
+ * (non configurable on `_bootstrap-variables.scss`)
+ */
+
+html, body {
+  @include antialiasing;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 62.5%;
+  [ui-view="main"] {
+    height: 100%;
+  }
+  > * {
+    @include pixel-rem($font-size-project);
+    @include pixel-rem($font-size-project * 1.6, 'line-height');
+  }
+
+  b {
+    font-weight: 600;
+  }
+
+  // Resetting Bootstrap's
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  p {
+    margin: 0.1em 0 0.8em;
+    small {
+      @include pixel-rem($font-size-project);
+    }
+  }
+
+  .small {
+    @include pixel-rem($font-size-project);
+  }
+
+  code {
+    font-style: normal !important;
+    @include pixel-rem($font-size-project * 0.8);
+  }
+
+  pre {
+    white-space: pre-wrap!important;
+  }
+
+  .nav > li > a:focus {
+    background-color: inherit;
+  }
+
+  .alert {
+    .close {
+      span {
+        @include pixel-rem(30);
+      }
+    }
+  }
+}
+
+.page {
+  padding-top: 60px;
+  .article {
+    display: block;
+  }
+  .sidebar {
+    .fixedsticky {
+      float: left;
+      top: 0;
+      padding-top: 60px;
+    }
+  }
+}
+

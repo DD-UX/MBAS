@@ -1,0 +1,36 @@
+/**
+ * These are the variables used throughout the application. This is where 
+ * overwrites that are not specific to components should be maintained.
+ */
+
+$color_list: (
+  "black": #000,
+  "white": #fff,
+  "chalk": #f7f5f7,
+  "lightblue": #7bb4e4,
+  "blue": #4596da,
+  "darkblue": #12478e,
+  "red": #eb123e,
+  "orange": #ff9000,
+  "green": #458e4d,
+  "yellow": #ff0,
+  "purple": #5d0e5d,
+  "bordeaux": #730000,
+  "gold": #cc8f3f,
+  "lightgray": #f5f5f5,
+  "gray": #ccc,
+  "darkgray": #555
+);
+
+/**
+ * `$font-size-project` no units so `pixel-rem` mixin handles it.
+ * See some examples on `_general-styles`
+ */
+
+$font-size-project: 16;
+
+/**
+ * `$img-route` variable to edit CSS massively
+ */
+
+$img-route: "images/";

@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+@import "functions/**/*";
+@import "mixins/**/*";
+@import "_variables";
+
 // Bootstrap override variables
 @import '_bootstrap-variables';
   
@@ -11,6 +15,8 @@
 
 // Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
 @import 'font-awesome';
+
+@import "shared-components/**/*";
 
 
 body {  

@@ -1,0 +1,31 @@
+/**
+ * Wrap video `iframe` with the `responsive-video-frame` class to ensure it works
+ * You can edit within the proper scope the `padding-bottom` to fix the video
+ * regarding aspect ratio and possible black margins (ex. Youtube videos)
+ * You can also use it on non-iframe elements by attaching the `.iframe` class
+ */
+
+.responsive-video-iframe {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+
+  /* 16x9 Aspect Ratio */
+  &.responsive-video-iframe-16x9 {
+    padding-bottom: 56.25%;
+  }
+
+  /* 4x3 Aspect Ratio */
+  &.responsive-video-iframe-4x3 {
+    padding-bottom: 75%;
+  }
+
+  .iframe,
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
