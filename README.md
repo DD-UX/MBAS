@@ -1,4 +1,4 @@
-# MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass
+# MBAS <small>(alpha)</small> - Middleman 4 + Bootstrap 4 + Angular + Sass
 
 #### Middleman environment with Bootstrap 4 Alpha for layout, Angular to handle the data binding, routing and general UX, and Sass to enhance the developer experience at the moment of coding.
 
@@ -55,3 +55,9 @@ related with Mac OSX "El Capitan"
 * Environment (OS/Browser) detection
 * Parallax layouts
 * Securebox modules (sensitive content to be loaded only on demand)
+
+## TO DO <small>2016/04/11</small>:
+* Build process: fix and test output
+* Finish internal documentation
+* Minor other fixes
+* Extend project starter beyond!
