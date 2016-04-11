@@ -1,606 +1,606 @@
 <section class="page page--home container">
-    <div class="row">
-        <menu class="col-md-4 hidden-sm-down sidebar">
-            <ul class="nav nav-pills nav-stacked sticky">
-                <li class="nav-item"><a href="#introduction" du-scrollspy="introduction" class="transition nav-link" du-smooth-scroll>Introduction</a></li>
-                <li class="nav-item"><a href="#variables" du-scrollspy="variables" class="transition nav-link" du-smooth-scroll>Variables</a></li>
-                <li class="nav-item"><a href="#functions" du-scrollspy="functions" class="transition nav-link" du-smooth-scroll>Functions</a></li>
-                <li class="nav-item"><a href="#mixins" du-scrollspy="mixins" class="transition nav-link" du-smooth-scroll>Mixins</a></li>
-                <li class="nav-item"><a href="#shared-components" du-scrollspy="shared-components" class="transition nav-link" du-smooth-scroll>Shared components</a></li>
-                <li class="nav-item"><a href="#common" du-scrollspy="common" class="transition nav-link" du-smooth-scroll>Common folder</a></li>
-                <li class="nav-item"><a href="#app" du-scrollspy="app" class="transition nav-link" du-smooth-scroll>App components and partials</a></li>
-            </ul>
-        </menu>
-        <div class="col-md-8 col-xs-12">
-            <main id="introduction" class="article">
-                <h2 class="main__title">Briefly introduction</h2>
-                <p>As you might probably read, current project starter runs CSS on Sass to ensure max possibilities for developers
-                    to create awesome stuff.</p>
-                <p>If you didn't read the
-                    <a ui-sref="home" class="transition clickable">homepage</a> , please do before continue with current
-                    documentation
-                </p>
-                <p>If you already did, keep on <a href="#variables" class="transition clickable" du-smooth-scroll>
-                    variables</a>, <strong>good luck!</strong></p>
+  <div class="row">
+    <menu class="col-md-4 hidden-sm-down sidebar">
+      <ul class="nav nav-pills nav-stacked sticky">
+        <li class="nav-item"><a href="#introduction" du-scrollspy="introduction" class="transition nav-link" du-smooth-scroll>Introduction</a></li>
+        <li class="nav-item"><a href="#variables" du-scrollspy="variables" class="transition nav-link" du-smooth-scroll>Variables</a></li>
+        <li class="nav-item"><a href="#functions" du-scrollspy="functions" class="transition nav-link" du-smooth-scroll>Functions</a></li>
+        <li class="nav-item"><a href="#mixins" du-scrollspy="mixins" class="transition nav-link" du-smooth-scroll>Mixins</a></li>
+        <li class="nav-item"><a href="#shared-components" du-scrollspy="shared-components" class="transition nav-link" du-smooth-scroll>Shared components</a></li>
+        <li class="nav-item"><a href="#common" du-scrollspy="common" class="transition nav-link" du-smooth-scroll>Common folder</a></li>
+        <li class="nav-item"><a href="#app" du-scrollspy="app" class="transition nav-link" du-smooth-scroll>App components and partials</a></li>
+      </ul>
+    </menu>
+    <div class="col-md-8 col-xs-12">
+      <main id="introduction" class="article">
+        <h2 class="main__title">Briefly introduction</h2>
+        <p>As you might probably read, current project starter runs CSS on Sass to ensure max possibilities for developers
+          to create awesome stuff.</p>
+        <p>If you didn't read the
+          <a ui-sref="home" class="transition clickable">homepage</a> , please do before continue with current
+          documentation
+        </p>
+        <p>If you already did, keep on <a href="#variables" class="transition clickable" du-smooth-scroll>
+          variables</a>, <strong>good luck!</strong></p>
 
-            </main>
-            <hr>
-            <article id="variables" class="article">
-                <h2 class="secondary__title">Variables</h2>
-                <p>There are two major files to set variables:</p>
-                <ul>
-                    <li><b>_bootstrap-variables.scss</b>: As the name indicates you can access to any of the Bootstrap's variables and change defaults values before Middleman compiles it.</li>
-                    <li><b>_variables.scss</b>: Used to store any custom Sass variable made by the team.</li>
-                </ul>
-                <ul class="breadcrumb">
-                    <li>source</li>
-                    <li>assets</li>
-                    <li>sass</li>
-                    <li>_bootstrap-variables.scss</li>
-                </ul>
-                <ul class="breadcrumb">
-                    <li>source</li>
-                    <li>assets</li>
-                    <li>sass</li>
-                    <li>_variables.scss</li>
-                </ul>
-                <ul>
-                    <li>
-                        <code>$color_list</code>: Map of colors. Set the proper values when you get them at the beginning
-                        of a project and create as much positions as you need. Access to each color using
-                        <code>get_color()</code>
-                        <a href="#functions" class="transition clickable" du-smooth-scroll>function</a> or apply them using
-                        shared components classes for text color, background color or border color.
-                        <br>
-                        <div class="label label-info">Hint:</div> Any new color you add will also add a shared component class for each sort (text, bg,
-                        border). See the full list in <a href="#shared-components" class="transition clickable" du-smooth-scroll>shared components</a>.
-                    </li>
-                    <li>
-                        <code>$font-size-project</code>: Amount of pixel size without units to be handled by
-                        <code>pixel-rem</code> <a href="#mixins" class="transition clickable" du-smooth-scroll>mixin</a>.
-                    </li>
-                    <li>
-                        <code>$img-route</code>: Variable to edit CSS image routing massively (very useful to move them into
-                        CDN).
-                    </li>
-                </ul>
-            </article>
-            <hr>
-            <article id="functions" class="article">
-                <h2 class="secondary__title">Functions</h2>
-                <h6 class="third__title">Input</h6>
-                <ul class="breadcrumb">
-                    <li>source</li>
-                    <li>assets</li>
-                    <li>sass</li>
-                    <li>functions</li>
-                    <li>_**.scss</li>
-                </ul>
-                <ul>
-                    <li>
-                        <code>get_color()</code>: Used to retrieve a value from the <code>$color_list</code> map in
-                        <a href="#variables" class="transition clickable" du-smooth-scroll>_variables.scss</a>.
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Params</th>
-                                    <th>Type</th>
-                                    <th>Default value</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>$color</code></td>
-                                    <td>String</td>
-                                    <td>- none -</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                </ul>
+      </main>
+      <hr>
+      <article id="variables" class="article">
+        <h2 class="secondary__title">Variables</h2>
+        <p>There are two major files to set variables:</p>
+        <ul>
+          <li><b>_bootstrap-variables.scss</b>: As the name indicates you can access to any of the Bootstrap's variables and change defaults values before Middleman compiles it.</li>
+          <li><b>_variables.scss</b>: Used to store any custom Sass variable made by the team.</li>
+        </ul>
+        <ul class="breadcrumb">
+          <li>source</li>
+          <li>assets</li>
+          <li>sass</li>
+          <li>_bootstrap-variables.scss</li>
+        </ul>
+        <ul class="breadcrumb">
+          <li>source</li>
+          <li>assets</li>
+          <li>sass</li>
+          <li>_variables.scss</li>
+        </ul>
+        <ul>
+          <li>
+            <code>$color_list</code>: Map of colors. Set the proper values when you get them at the beginning
+            of a project and create as much positions as you need. Access to each color using
+            <code>get_color()</code>
+            <a href="#functions" class="transition clickable" du-smooth-scroll>function</a> or apply them using
+            shared components classes for text color, background color or border color.
+            <br>
+            <div class="label label-info">Hint:</div> Any new color you add will also add a shared component class for each sort (text, bg,
+            border). See the full list in <a href="#shared-components" class="transition clickable" du-smooth-scroll>shared components</a>.
+          </li>
+          <li>
+            <code>$font-size-project</code>: Amount of pixel size without units to be handled by
+            <code>pixel-rem</code> <a href="#mixins" class="transition clickable" du-smooth-scroll>mixin</a>.
+          </li>
+          <li>
+            <code>$img-route</code>: Variable to edit CSS image routing massively (very useful to move them into
+            CDN).
+          </li>
+        </ul>
+      </article>
+      <hr>
+      <article id="functions" class="article">
+        <h2 class="secondary__title">Functions</h2>
+        <h6 class="third__title">Input</h6>
+        <ul class="breadcrumb">
+          <li>source</li>
+          <li>assets</li>
+          <li>sass</li>
+          <li>functions</li>
+          <li>_**.scss</li>
+        </ul>
+        <ul>
+          <li>
+            <code>get_color()</code>: Used to retrieve a value from the <code>$color_list</code> map in
+            <a href="#variables" class="transition clickable" du-smooth-scroll>_variables.scss</a>.
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Params</th>
+                  <th>Type</th>
+                  <th>Default value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>$color</code></td>
+                  <td>String</td>
+                  <td>- none -</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
 
-            </article>
-            <hr>
-            <article id="mixins" class="article">
-                <h2 class="secondary__title">Mixins</h2>
-                <h6 class="third__title">Input</h6>
-                <ul class="breadcrumb">
-                    <li>source</li>
-                    <li>assets</li>
-                    <li>sass</li>
-                    <li>mixins</li>
-                    <li>_**.scss</li>
-                </ul>
-                <ul>
-                    <li>
-                        <code>antialiasing</code>: <b>No params</b>. Includes some different antialiasing techniques in the
-                        selector of your choice (currently applied in <code>&lt;body&gt;</code>).
-                    </li>
-                    <li>
-                        <code>text-ellipsis</code>: <b>No params</b>. Includes the required styles to create a single-line
-                        text that applies ellipsis when the space is not enough.
-                    </li>
-                    <li>
-                        <code>HIDPI</code>: Wraps your code within different browser's media queries receiving
-                        <code>$ratio</code> equal to the dpi you target your own code.
-                        <br>Used for
-                        <a href="#shared-components" class="transition clickable" du-smooth-scroll>shared component</a> classes
-                        <code>.retina__visible</code> and <code>.retina__hidden</code>.
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Params</th>
-                                    <th>Type</th>
-                                    <th>Default value</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>$ratio</code></td>
-                                    <td>Float</td>
-                                    <td>1.3</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <code>pixel-rem</code>: Sets some CSS property in <code>rem</code> and <code>px</code> fallback for
-                        older browsers. The integer is equal to the size in pixels.
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Params</th>
-                                    <th>Type</th>
-                                    <th>Default value</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>$val</code></td>
-                                    <td>Integer</td>
-                                    <td>14</td>
-                                </tr>
-                                <tr>
-                                    <td><code>$prop</code></td>
-                                    <td>String</td>
-                                    <td>font-size</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                </ul>
-            </article>
-            <hr>            
-            <article id="shared-components" class="article">
-                <h2 class="secondary__title">Shared components</h2>
-                <h6 class="third__title">Input</h6>
-                <ul class="breadcrumb">
-                    <li>source</li>
-                    <li>assets</li>
-                    <li>sass</li>
-                    <li>shared-components</li>
-                    <li>_**.scss</li>
-                </ul>
-                <ul>
-                    <li>
-                        <code>.clickable</code>: Class used to make any element act like a link/button. Adds
-                        <code>cursor: pointer;</code> and <code>user-select: none;</code>
-                    </li>
-                    <li>
-                        <b>color-helpers</b>: Set of classes used to apply different colors for elements in different properties
-                        and status. The full list of colors comes from the
-                        <code>$color_list</code>
-                        <a href="#variables" class="transition clickable" du-smooth-scroll>variable</a>.
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Properties</th>
-                                    <th>Status</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>color</code>,
-                                        <code>background-color</code>,
-                                        <code>border</code>
-                                    </td>
-                                    <td>
-                                        regular,
-                                        <code>:hover</code>,
-                                        <code>:active</code>,
-                                        <code>:focus</code>,
-                                        <code>:checked</code>
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="text__blue bg__lightblue border__blue
-                                            text__white--hover  bg__blue--hover"
-                                            &gt;
-                                        </code>
+      </article>
+      <hr>
+      <article id="mixins" class="article">
+        <h2 class="secondary__title">Mixins</h2>
+        <h6 class="third__title">Input</h6>
+        <ul class="breadcrumb">
+          <li>source</li>
+          <li>assets</li>
+          <li>sass</li>
+          <li>mixins</li>
+          <li>_**.scss</li>
+        </ul>
+        <ul>
+          <li>
+            <code>antialiasing</code>: <b>No params</b>. Includes some different antialiasing techniques in the
+            selector of your choice (currently applied in <code>&lt;body&gt;</code>).
+          </li>
+          <li>
+            <code>text-ellipsis</code>: <b>No params</b>. Includes the required styles to create a single-line
+            text that applies ellipsis when the space is not enough.
+          </li>
+          <li>
+            <code>HIDPI</code>: Wraps your code within different browser's media queries receiving
+            <code>$ratio</code> equal to the dpi you target your own code.
+            <br>Used for
+            <a href="#shared-components" class="transition clickable" du-smooth-scroll>shared component</a> classes
+            <code>.retina__visible</code> and <code>.retina__hidden</code>.
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Params</th>
+                  <th>Type</th>
+                  <th>Default value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>$ratio</code></td>
+                  <td>Float</td>
+                  <td>1.3</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <code>pixel-rem</code>: Sets some CSS property in <code>rem</code> and <code>px</code> fallback for
+            older browsers. The integer is equal to the size in pixels.
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Params</th>
+                  <th>Type</th>
+                  <th>Default value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>$val</code></td>
+                  <td>Integer</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td><code>$prop</code></td>
+                  <td>String</td>
+                  <td>font-size</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </article>
+      <hr>            
+      <article id="shared-components" class="article">
+        <h2 class="secondary__title">Shared components</h2>
+        <h6 class="third__title">Input</h6>
+        <ul class="breadcrumb">
+          <li>source</li>
+          <li>assets</li>
+          <li>sass</li>
+          <li>shared-components</li>
+          <li>_**.scss</li>
+        </ul>
+        <ul>
+          <li>
+            <code>.clickable</code>: Class used to make any element act like a link/button. Adds
+            <code>cursor: pointer;</code> and <code>user-select: none;</code>
+          </li>
+          <li>
+            <b>color-helpers</b>: Set of classes used to apply different colors for elements in different properties
+            and status. The full list of colors comes from the
+            <code>$color_list</code>
+            <a href="#variables" class="transition clickable" du-smooth-scroll>variable</a>.
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Properties</th>
+                  <th>Status</th>
+                  <th>Sample</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>color</code>,
+                    <code>background-color</code>,
+                    <code>border</code>
+                  </td>
+                  <td>
+                    regular,
+                    <code>:hover</code>,
+                    <code>:active</code>,
+                    <code>:focus</code>,
+                    <code>:checked</code>
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="text__blue bg__lightblue border__blue
+                      text__white--hover  bg__blue--hover"
+                      &gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <b>headings</b>: customs classes to control headings hierarchy. Add your own general heading classes
-                        within this file.
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Classes</th>
-                                    <th>Description</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>.main__title</code>
-                                    </td>
-                                    <td>
-                                        Biggest title/heading size
-                                    </td>
-                                    <td>
-                                        <code>
-                                        &lt;h2 class="main__title"&gt;Biggest heading&lt;/h2&gt;
-                                    </code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <b>headings</b>: customs classes to control headings hierarchy. Add your own general heading classes
+            within this file.
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Classes</th>
+                  <th>Description</th>
+                  <th>Sample</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>.main__title</code>
+                  </td>
+                  <td>
+                    Biggest title/heading size
+                  </td>
+                  <td>
+                    <code>
+                      &lt;h2 class="main__title"&gt;Biggest heading&lt;/h2&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.secondary__title</code>
-                                    </td>
-                                    <td>
-                                        Second title/heading size
-                                    </td>
-                                    <td>
-                                        <code>
-                                        &lt;h2 class="secondary__title"&gt;Second important heading&lt;/h2&gt;
-                                    </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.secondary__title</code>
+                  </td>
+                  <td>
+                    Second title/heading size
+                  </td>
+                  <td>
+                    <code>
+                      &lt;h2 class="secondary__title"&gt;Second important heading&lt;/h2&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.third__title</code>
-                                    </td>
-                                    <td>
-                                        Third title/heading size
-                                    </td>
-                                    <td>
-                                        <code>
-                                        &lt;h2 class="third__title"&gt;Third important heading&lt;/h2&gt;
-                                    </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.third__title</code>
+                  </td>
+                  <td>
+                    Third title/heading size
+                  </td>
+                  <td>
+                    <code>
+                      &lt;h2 class="third__title"&gt;Third important heading&lt;/h2&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <b>notes</b>: Module used in this boilerplate to write some documentation. Browse the home's source
-                        for examples. <code>.notes</code> also contains <code>.notes__title</code> and
-                        <code>.note</code> selectors.
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Classes</th>
-                                    <th>Description</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>.notes</code>
-                                    </td>
-                                    <td>
-                                        Block module to list documentation. Regularly is used with <code>&lt;dl&gt;</code>.
-                                    </td>
-                                    <td rowspan="3">
-                                        <code>
-                                        &lt;dl class="notes"&gt;<br>
-                                        &lt;dt class="note__title"&gt;Le title&lt;/dt&gt;<br>
-                                        &lt;dd class="note__item"&gt;Some item&lt;/dd&gt;<br>
-                                        &lt;dd class="note__item"&gt;Some item 2&lt;/dd&gt;<br>
-                                        &lt;dd class="note__item"&gt;Some item 3&lt;/dd&gt;<br>
-                                        &lt;/dl&gt;
-                                    </code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <b>notes</b>: Module used in this boilerplate to write some documentation. Browse the home's source
+            for examples. <code>.notes</code> also contains <code>.notes__title</code> and
+            <code>.note</code> selectors.
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Classes</th>
+                  <th>Description</th>
+                  <th>Sample</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>.notes</code>
+                  </td>
+                  <td>
+                    Block module to list documentation. Regularly is used with <code>&lt;dl&gt;</code>.
+                  </td>
+                  <td rowspan="3">
+                    <code>
+                      &lt;dl class="notes"&gt;<br>
+                      &lt;dt class="note__title"&gt;Le title&lt;/dt&gt;<br>
+                      &lt;dd class="note__item"&gt;Some item&lt;/dd&gt;<br>
+                      &lt;dd class="note__item"&gt;Some item 2&lt;/dd&gt;<br>
+                      &lt;dd class="note__item"&gt;Some item 3&lt;/dd&gt;<br>
+                      &lt;/dl&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.note__title</code>
-                                    </td>
-                                    <td>
-                                        Heading for notes list. Regularly is used with <code>&lt;dt&gt;</code>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.note__item</code>
-                                    </td>
-                                    <td>
-                                        The note item. Add as many as you want, you'll see even elements have a different background from odd's. Regularly is used
-                                        with
-                                        <code>&lt;dt&gt;</code>.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <code>.parallaxible</code>: class used for elements to compound layouts with parallax effects. Read
-                        also <a ui-sref="parallax" class="transition clickable">Parallax</a> source for more information.
-                    </li>
-                    <li>
-                        <b>retina-display</b>: Classes created to interact with retina devices, based on HIDPI
-                        <a href="#mixins" class="transition clickable" du-smooth-scroll>mixin</a>. The dpi ratio is 1.3 (default).
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Classes</th>
-                                    <th>Description</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>.retina__visible</code>
-                                    </td>
-                                    <td>
-                                        Element visible only on retina devices
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;p class="retina__visible"&gt;Retina text&lt;/p&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.note__title</code>
+                  </td>
+                  <td>
+                    Heading for notes list. Regularly is used with <code>&lt;dt&gt;</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.note__item</code>
+                  </td>
+                  <td>
+                    The note item. Add as many as you want, you'll see even elements have a different background from odd's. Regularly is used
+                    with
+                    <code>&lt;dt&gt;</code>.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <code>.parallaxible</code>: class used for elements to compound layouts with parallax effects. Read
+            also <a ui-sref="parallax" class="transition clickable">Parallax</a> source for more information.
+          </li>
+          <li>
+            <b>retina-display</b>: Classes created to interact with retina devices, based on HIDPI
+            <a href="#mixins" class="transition clickable" du-smooth-scroll>mixin</a>. The dpi ratio is 1.3 (default).
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Classes</th>
+                  <th>Description</th>
+                  <th>Sample</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>.retina__visible</code>
+                  </td>
+                  <td>
+                    Element visible only on retina devices
+                  </td>
+                  <td>
+                    <code>
+                      &lt;p class="retina__visible"&gt;Retina text&lt;/p&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.retina__hidden</code>
-                                    </td>
-                                    <td>
-                                        Element hidden only on retina devices
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;p class="retina__hidden"&gt;Regular text (not visible on retina)&lt;/p&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.retina__hidden</code>
+                  </td>
+                  <td>
+                    Element hidden only on retina devices
+                  </td>
+                  <td>
+                    <code>
+                      &lt;p class="retina__hidden"&gt;Regular text (not visible on retina)&lt;/p&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <b>transforms</b>: Group of classes generated to set the <code>transform-origin</code> of an element
-                        very quick. This helper will be mostly used in Parallax layouts where elements require multiple transforms.
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Classes</th>
-                                    <th>Description</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>.transform-left-top</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is left/top
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-left-top"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <b>transforms</b>: Group of classes generated to set the <code>transform-origin</code> of an element
+            very quick. This helper will be mostly used in Parallax layouts where elements require multiple transforms.
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Classes</th>
+                  <th>Description</th>
+                  <th>Sample</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>.transform-left-top</code>
+                  </td>
+                  <td>
+                    Transform origin is left/top
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-left-top"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-left-center</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is left/center
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-left-center"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-left-center</code>
+                  </td>
+                  <td>
+                    Transform origin is left/center
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-left-center"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-left-bottom</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is left/bottom
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-left-bottom"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-left-bottom</code>
+                  </td>
+                  <td>
+                    Transform origin is left/bottom
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-left-bottom"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-center-top</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is center/top
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-center-top"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-center-top</code>
+                  </td>
+                  <td>
+                    Transform origin is center/top
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-center-top"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-center-center</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is center/center
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-center-center"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-center-center</code>
+                  </td>
+                  <td>
+                    Transform origin is center/center
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-center-center"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-center-bottom</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is center/bottom
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-center-bottom"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-center-bottom</code>
+                  </td>
+                  <td>
+                    Transform origin is center/bottom
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-center-bottom"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-right-top</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is right/top
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-right-top"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-right-top</code>
+                  </td>
+                  <td>
+                    Transform origin is right/top
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-right-top"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-right-center</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is right/center
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-right-center"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-right-center</code>
+                  </td>
+                  <td>
+                    Transform origin is right/center
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-right-center"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.transform-right-bottom</code>
-                                    </td>
-                                    <td>
-                                        Transform origin is right/bottom
-                                    </td>
-                                    <td>
-                                        <code>
-                                            &lt;div class="transform-right-bottom"&gt;&lt;/div&gt;
-                                        </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.transform-right-bottom</code>
+                  </td>
+                  <td>
+                    Transform origin is right/bottom
+                  </td>
+                  <td>
+                    <code>
+                      &lt;div class="transform-right-bottom"&gt;&lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <b>vertical-aligner</b>: CSS hack to align elements vertically, made in CSS2.1
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Classes</th>
-                                    <th>Description</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>.vertical-aligner</code>
-                                    </td>
-                                    <td>
-                                        Wrapper to make some element align vertically
-                                    </td>
-                                    <td rowspan="2">
-                                        <code>
-                                        &lt;div class="vertical-aligner"&gt;<br>
-                                        &lt;div class="vertical-aligned"&gt;&lt;/div&gt;<br>
-                                        &lt;/div&gt;
-                                    </code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <b>vertical-aligner</b>: CSS hack to align elements vertically, made in CSS2.1
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Classes</th>
+                  <th>Description</th>
+                  <th>Sample</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>.vertical-aligner</code>
+                  </td>
+                  <td>
+                    Wrapper to make some element align vertically
+                  </td>
+                  <td rowspan="2">
+                    <code>
+                      &lt;div class="vertical-aligner"&gt;<br>
+                      &lt;div class="vertical-aligned"&gt;&lt;/div&gt;<br>
+                      &lt;/div&gt;
+                    </code>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.vertical-aligned</code>
-                                    </td>
-                                    <td>
-                                        Selector required to align some element vertically
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                </ul>
-            </article>
-            <hr>
-            <article id="common" class="article">
-                <h2 class="secondary__title">Common folder</h2>
-                <h6 class="third__title">Input</h6>
-                <ul class="breadcrumb">
-                    <li>source</li>
-                    <li>sass</li>
-                    <li>common</li>
-                    <li>**</li>
-                    <li>_**.scss</li>
-                </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>.vertical-aligned</code>
+                  </td>
+                  <td>
+                    Selector required to align some element vertically
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </article>
+      <hr>
+      <article id="common" class="article">
+        <h2 class="secondary__title">Common folder</h2>
+        <h6 class="third__title">Input</h6>
+        <ul class="breadcrumb">
+          <li>source</li>
+          <li>sass</li>
+          <li>common</li>
+          <li>**</li>
+          <li>_**.scss</li>
+        </ul>
 
-                <p>These Sass files are related mostly with the directives nested within common folder.</p>
+        <p>These Sass files are related mostly with the directives nested within common folder.</p>
 
-                <ul>
-                    <li>
-                        <b>form-elements-custom</b>: Default styles for custom
-                        <a ui-sref="form-elements" class="transition clickable">Form Elements</a>.
-                    </li>
-                    <li>
-                        <b>securebox</b>: Default styles for
-                        <a ui-sref="securebox" class="transition clickable">Securebox</a> module.
-                    </li>
-                </ul>
-            </article>
-            <hr>
-            <article id="app" class="article">
-                <h2 class="secondary__title">App components and partials</h2>
-                <h6 class="third__title">Input</h6>
-                <ul class="breadcrumb">
-                    <li>source</li>
-                    <li>sass</li>
-                    <li>app</li>
-                    <li>**</li>
-                    <li>_**.scss</li>
-                </ul>
-            </article>
+        <ul>
+          <li>
+            <b>form-elements-custom</b>: Default styles for custom
+            <a ui-sref="form-elements" class="transition clickable">Form Elements</a>.
+          </li>
+          <li>
+            <b>securebox</b>: Default styles for
+            <a ui-sref="securebox" class="transition clickable">Securebox</a> module.
+          </li>
+        </ul>
+      </article>
+      <hr>
+      <article id="app" class="article">
+        <h2 class="secondary__title">App components and partials</h2>
+        <h6 class="third__title">Input</h6>
+        <ul class="breadcrumb">
+          <li>source</li>
+          <li>sass</li>
+          <li>app</li>
+          <li>**</li>
+          <li>_**.scss</li>
+        </ul>
+      </article>
 
-        </div>
     </div>
+  </div>
 </section>

@@ -1,11 +1,25 @@
-# Bootstrap 4 Test
+# MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass
 **Middleman environment with Bootstrap 4 Alpha to test and plan a new project starter**
 
 Dependencies:
-* [Middleman](https://middlemanapp.com/advanced/asset_pipeline/)
-* [Bootstrap 4 Alpha](https://github.com/twbs/bootstrap-rubygem)
+* [Middleman 4](https://middlemanapp.com/advanced/asset_pipeline/)
+* [Bootstrap 4 Alpha](http://v4-alpha.getbootstrap.com/)
+* [AngularJS](http://v4-alpha.getbootstrap.com/)
+* [Sass](http://v4-alpha.getbootstrap.com/)
+
+
+## Installing process
+
+Download the repository and execute:
+```
+$ gem install middleman
+$ bower install
+$ bundle install
+$ bundle exec middleman
+```
 
 If you have this error while installing Middleman:
+
 ```
 make "DESTDIR=" clean
 

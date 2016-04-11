@@ -1,12 +1,12 @@
 <!-- Template for custom radio -->
 
 <div class="checkbox checkbox-radio-custom">
-    <label class="clickable">
-        <input name="{{name}}" ng-disabled="disabledIf" type="radio" ng-model="model" value="{{model.value}}">
-        <span class="decoy decoy-radio {{decoyStyles}}" ng-if="checkIconHtml" ng-bind-html="checkIconHtml"></span>
-        <span class="decoy decoy-radio {{decoyStyles}}" ng-if="!checkIconHtml">
-            <i class="fa fa-circle text__blue transition"></i>
-        </span>
-        <span ng-if="label" ng-bind="label"></span>
-    </label>
+  <label class="clickable">
+    <input name="{{name}}" ng-disabled="disabledIf" type="radio" ng-model="model" value="{{model.value}}">
+    <span class="decoy decoy-radio {{decoyStyles}}" ng-if="checkIconHtml" ng-bind-html="checkIconHtml"></span>
+    <span class="decoy decoy-radio {{decoyStyles}}" ng-if="!checkIconHtml">
+      <i class="fa fa-circle text__blue transition"></i>
+    </span>
+    <span ng-if="label" ng-bind="label"></span>
+  </label>
 </div>
