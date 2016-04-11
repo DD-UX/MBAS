@@ -2,7 +2,7 @@
 **Middleman environment with Bootstrap 4 Alpha to test and plan a new project starter**
 
 Dependencies:
-* [Middleman 4](https://middlemanapp.com/advanced/asset_pipeline/)
+* [Middleman 4](https://middlemanapp.com/)
 * [Bootstrap 4 Alpha](http://v4-alpha.getbootstrap.com/)
 * [AngularJS](https://angularjs.org/)
 * [Sass](http://sass-lang.com/)
