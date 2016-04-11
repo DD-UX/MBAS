@@ -1,0 +1,39 @@
+<section class="page page--environment-detection container-fluid">
+    <div class="row">
+        <menu class="col-md-4 hidden-sm hidden-xs sidebar">
+            <ul class="nav nav-pills nav-stacked fixedsticky">
+                <li du-scrollspy="introduction">
+                    <a href="#introduction" class="transition" du-smooth-scroll>
+                    Introduction
+                    </a>
+                </li>
+                <li du-scrollspy="code"><a href="#code" class="transition" du-smooth-scroll>Code</a></li>
+            </ul>
+        </menu>
+        <div class="col-md-8 col-xs-12">
+            <main id="introduction" class="article">
+                <h2 class="main__title">Environment detection
+                    <small>
+                        <a href="http://pgwjs.com/pgwbrowser/" target="_blank" class="transition clickable">
+                            PgwBrowser
+                        </a>
+                    </small>
+                </h2>
+                <p>PgwBrowser is a Zepto/jQuery library to detect OS, browser, viewport, and more.</p>
+                <p>I've set the object in the <b>body</b> directive's <code>scope</code> which executes at the beginning of
+                    the page.</p>
+                <p>
+                    You can also read the
+                    <a href="http://pgwjs.com/pgwbrowser/" target="_blank" class="transition clickable">
+                        full  documentation</a> for more information.
+                </p>
+            </main>
+            <hr>
+            <article id="code" class="article">
+                <h2 class="secondary__title">Code <small>(output)</small></h2>
+                <p>Object: <code>scope.envDetection</code>.</p>
+                <pre>{{envDetection | json}}</pre>
+            </article>
+        </div>
+    </div>
+</section>

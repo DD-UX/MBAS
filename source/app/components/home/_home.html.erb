@@ -1,0 +1,236 @@
+<section class="page page--home container">
+    <div class="row">
+        <menu class="col-md-4 hidden-sm-down sidebar">
+            <ul class="nav nav-pills nav-stacked sticky">
+                <li class="nav-item">
+                    <a du-scrollspy="install" href="#install" class="transition nav-link" du-smooth-scroll>Install MBAS</a>
+                </li>
+                <li class="nav-item">
+                    <a du-scrollspy="middleman" href="#middleman" class="transition nav-link" du-smooth-scroll>Middleman 4</a>
+                </li>
+                <li class="nav-item">
+                    <a du-scrollspy="bootstrap" href="#bootstrap" class="transition nav-link" du-smooth-scroll>Bootstrap 4</a>
+                </li>
+                <li class="nav-item">
+                    <a du-scrollspy="angular" href="#angular" class="transition nav-link" du-smooth-scroll>AngularJS</a>
+                </li>
+                <li class="nav-item">
+                    <a du-scrollspy="sass" href="#sass" class="transition nav-link" du-smooth-scroll>Sass</a>
+                </li>
+            </ul>
+        </menu>
+        <div class="col-md-8 col-xs-12">
+            <alert class="clearfix" ng-repeat="alert in welcomeAlerts" type="{{alert.type}}" close="closeAlert($index)">
+                <span ng-bind-html="alert.msg"></span>
+            </alert>
+            <main id="install" class="article">
+                <h2 class="main__title">MBAS up and running!</h2>
+                <dl>
+                    <dt>To start using this boilerplate we first have to install all the dependencies:</dt>
+                    <dd><code>$ gem install middleman</code></dd>
+                    <dd><code>$ bower install</code></dd>
+                    <dd><code>$ bundle install</code></dd>
+                    <dd><code>$ bundle exec middleman</code></dd>
+                </dl>
+                <dl>
+                    <dt>If you want to compile all for production:</dt>
+                    <dd><code>$ bundle exec middleman build</code></dd>
+                </dl>
+
+                <p><span class="label label-info">Hint:</span> When start new project check for libraries upgrades and limit versions on <code>package.json</code> and <code>bower.json</code> to avoid future issues.</p>
+
+                <p><span class="label label-info">Hint:</span> Try always run <code>$ bundle install</code> and <code>$ bower install</code> before running <code>$ bundle exec middleman</code>. If the <code>build</code> brings issues, make sure you remove <code>/vendor</code> folder and run <code>$ bower install</code> again.</p>
+
+                <p><i>Please <code>build</code> after.</i></p>
+            </main>            
+            <hr>
+            <article id="middleman" class="article">
+                <h2>
+                    <a class="secondary__title" href="https://middlemanapp.com/" target="_blank">Middleman 4</a>
+                </h2>                
+                <p>Middleman</p>
+                <p><span class="label label-info">Hint:</span> Check for more dependencies at <code>/source/app/_app.js</code>.</p>
+            </article>            
+            <hr>
+            <article id="bootstrap" class="article">
+                <h2><a class="secondary__title" href="http://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a></h2>
+                <ul class="breadcrumb">
+                    <li>source</li>
+                    <li>assets</li>
+                    <li>sass</li>
+                    <li>_bootstrap-variables.scss</li>
+                </ul>
+            </article>
+            <hr>
+            <article id="angular" class="article">
+                <h2>
+                    <a class="secondary__title" href="https://angularjs.org/" target="_blank">AngularJS</a>
+                </h2>
+                <ul class="breadcrumb">
+                    <li>vendor</li>
+                    <li>angular</li>
+                    <li>angular.js</li>
+                </ul>
+                <ul class="breadcrumb">
+                    <li>vendor</li>
+                    <li>angular-**</li>
+                    <li>angular-**.js</li>
+                </ul>
+                <p>The first angular stone of this project starter is... Angular (redundant indeed).</p>
+
+                <p>
+                    We are using <a href="https://github.com/johnpapa/angular-styleguide" target="_blank">John Papa's
+                    style
+                    guide</a>. Make sure you've read this at least once before digging into. Thanks!
+                </p>
+                <dl class="notes">
+                    <dt class="note__title">Some dependencies</dt>
+                    <dd class="note__item">
+                        <span class="label label-danger">Angular Core</span>
+                        <b><a href="https://docs.angularjs.org/api/ngAnimate" target="_blank">Animate:</a></b> Add CSS classes
+                        to create plenty of custom transitions without adding any JS.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-danger">Angular Core</span>
+                        <b><a href="https://docs.angularjs.org/api/ngCookies" target="_blank">Cookies:</a></b> Provides
+                        <a href="https://docs.angularjs.org/api/ngCookies/service/$cookies">
+                            <code>$cookies</code> service
+                        </a> to put and get information.
+                        <br>Example: See home's welcome message, close it and reload. Message won't appear again.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-danger">Angular Core</span>
+                        <b><a href="https://docs.angularjs.org/api/ngSanitize" target="_blank">Sanitize:</a></b> Provides
+                        <a href="https://docs.angularjs.org/api/ngSanitize/service/$sanitize">
+                            <code>$sanitize</code> service
+                        </a> to sanitizes an html string by stripping all potentially dangerous tokens. It also allow to
+                        use
+                        <code>ng-bind-html</code> directive for content managing.
+                        <br>Examples: Form custom directives to switch HTML icons.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-primary">Angular UI</span>
+                        <b><a href="https://angular-ui.github.io/ui-router/site/#/api/ui.router" target="_blank">ui.router</a></b>                        Used to handle flow and components's interaction (much more useful than ngRoute).
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-primary">Angular UI</span>
+                        <b><a href="http://angular-ui.github.io/bootstrap/" target="_blank">ui.bootstrap</a></b> Angular
+                        directives to handle Bootstrap components instead jQuery's.
+                    </dd>
+                </dl>
+                <p>
+                    <span class="label label-info">Hint:</span> Check for more dependencies at
+                    <code>/source/app/_app.js</code>.
+                </p>
+            </article>
+            <hr>
+            <article id="sass" class="article">
+                <h2>
+                    <a class="secondary__title" href="http://sass-lang.com/" target="_blank">Sass</a>
+                </h2>
+                <ul class="breadcrumb">
+                    <li>source</li>
+                    <li>assets</li>
+                    <li>sass</li>
+                    <li>**</li>
+                    <li>*.scss</li>
+                </ul>
+                <ul class="breadcrumb">
+                    <li>source</li>
+                    <li>assets</li>
+                    <li>app</li>
+                    <li>**</li>
+                    <li>*.scss</li>
+                </ul>
+                <ul class="breadcrumb">
+                    <li>source</li>
+                    <li>common</li>
+                    <li>**</li>
+                    <li>*.scss</li>
+                </ul>
+                <p>We have a main file which includes all the rest as partials and Bootstrap Sass. There are four categories
+                    of Sass files which are: functions, mixins, shared components and modules (these are stored on the app components so don't look for them on Sass's).</p>
+
+                <p>Sass globbing gem is installed for bulk inclusion <code>@import "mixins/**/*";</code>.</p>
+                <dl class="notes">
+                    <dt class="note__title">Structure</dt>
+                    <dd class="note__item">
+                        <span class="label label-info">Includes all Sass partials</span>
+                        <b>main:</b> The only non-partial <code>*.scss</code> file which includes all the compiled partials
+                        plus bootstrap in a proper order.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-primary">Imported before Bootstrap's Core</span>
+                        <b>_variables:</b> Used to store any custom Sass variable including a map full of colours used to
+                        create a wide range of <code>.class</code> helpers (will go back to this sooner). The goal is to
+                        set the colors properly once we get them from the design. You can access to them by simply
+                        <code>get_color(color)</code>.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-primary">Imported before Bootstrap's Core</span>
+                        <b>_bootstrap-variables:</b> As the name indicates you can access to any of the Bootstrap's variables
+                        and change defaults values before Grunt compiles it (if you get in will see I'm already modifying
+                        stuff).
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-success">Imported after Bootstrap's Core</span>
+                        <b>_general-styles:</b> Used to keep clean the <code>main.scss</code> from all the general styles
+                        (body's, etc).
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-primary">Imported before Bootstrap's Core</span>
+                        <b>/functions/*.scss:</b> This folder is used to place all Sass <code>functions</code>. Ex:
+                        <code>get_code(color)</code> which is a shorthand for <code>map-get($color_list, $color);</code>.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-primary">Imported before Bootstrap's Core</span>
+                        <b>/mixins/*.scss:</b> Folder to store all our <code>mixins</code>. A good example is the <code>pixel-rem</code>                        used to pass a value and a property (both optionals, by default <code>pixel-rem(14,
+                        font-size)</code>) so will write the value in root em units and a fallback for older browsers in
+                        pixels.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-success">Imported after Bootstrap's Core</span>
+                        <b>/shared-components/*.scss:</b> Used to store Sass helpers to be easily implemented in the sitewide.
+                        For example there is an
+                        <code>@each
+                        </code> that creates a lot of classes for quick styling which target to text
+                        color, background and border color; and also for different status: regular, hover, active, checked.
+                    </dd>
+                    <dd class="note__item">
+                        <span class="label label-success">Imported after Bootstrap's Core</span>
+                        <b>/source/app/**/*.scss:</b> Different from the rest of the Sass files, these are nested with the app
+                        components. Create one Sass file for each specific component and implement some selector for inheritance.
+                        Ex: <b>Component:</b> "contact"; <b>Selector:</b> <code>.contact__page</code>.
+                    </dd>
+                </dl>
+                <p>Anytime you create a new Sass file please run a build task to bring it all together.</p>
+
+                <h3 class="note__title">Adopting BEM syntax
+                    <small>reason why</small>
+                </h3>
+                <p>Many times we target our styles to some specific markup using complex selectors like
+                    <code>section article h2 small {}</code> which is not bad for small project but when it get more complex
+                    we should start to create exceptions or copy/paste styles we already have into a brand new selector.
+                </p>
+
+                <p>This also happens a lot with headings, we target something like the font size to an specific tag and we miss
+                    the SEO or we mind it and repeat the above's example.</p>
+
+                <p>With <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/"><b>BEM
+                    syntax</b></a> I suggest a different approach: Keep the markup well-written and mind the design only
+                    in the CSS environment, creating recyclable and reusable selectors that helps to build the app instead
+                    of overriding complex and unreadable selectors.</p>
+
+                <p>You can see some of these practices on <code>/source/sass/shared-components/*.scss</code></p>
+
+                <p>
+                    <span class="label label-info">Hint:</span> I strongly recommend to take BEM or any other practice as
+                    a guideline. If you balance these concepts you'll probably get the best <i class="fa fa-smile-o"></i>.
+                </p>
+
+                <p>
+                    <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/#to-bem-or-not-to-bem" target="_blank">Read more about <i>"BEM or not to BEM"</i></a>.</p>
+            </article>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,244 @@
+<section class="page page--graybox container-fluid">
+    <div class="row">
+        <menu class="col-md-4 hidden-sm hidden-xs sidebar">
+            <ul class="nav nav-pills nav-stacked fixedsticky">
+                <li du-scrollspy="reason-why">
+                    <a href="#reason-why" class="transition" du-smooth-scroll>
+                        Reason why
+                    </a>
+                </li>
+                <li du-scrollspy="source"><a href="#source" class="transition" du-smooth-scroll>Source</a></li>
+            </ul>
+        </menu>
+        <div class="col-md-8 col-xs-12">
+            <main id="reason-why" class="article">
+                <h2 class="main__title">Securebox <small>reason why</small></h2>
+                <p>Some projects require a way to alert some specific content might be sensitive and probably the user don't
+                    want to read it.</p>
+                <p>However, if we want to add some UX for these situations we should code it at the moment.</p>
+                <p><b>Securebox</b> is a user friendly component made in Angular to overcome the problem with different modes:</p>
+                <ul>
+                    <li>Plain/HTML text</li>
+                    <li>Image</li>
+                    <li>Video</li>
+                    <li>Audio</li>
+                </ul>
+            </main>
+            <hr>
+            <article id="source" class="article">
+                <h2 class="secondary__title">Source:</h2>
+                <ul class="breadcrumb">
+                    <li>src</li>
+                    <li>common</li>
+                    <li>directives</li>
+                    <li>securebox</li>
+                    <li>**.**</li>
+                </ul>
+                <ul class="breadcrumb">
+                    <li>src</li>
+                    <li>assets</li>
+                    <li>sass</li>
+                    <li>shared-components</li>
+                    <li>_securebox.scss</li>
+                </ul>
+
+                <!-- Documentation -->
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Directive scope params</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <code>active</code>
+                        </td>
+                        <td>
+                            Boolean
+                        </td>
+                        <td>
+                            Sets active the element to display the information by default
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code>isText</code>
+                        </td>
+                        <td>
+                            Boolean
+                        </td>
+                        <td>
+                            Checks if the element to display is a plain/HTML text
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>Text Source</code>
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            Information to display if is plain/HTML text
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code>isImage</code>
+                        </td>
+                        <td>
+                            Boolean
+                        </td>
+                        <td>
+                            Checks if the element to display is an image
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>Image Source</code>
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            Image src
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code>isVideo</code>
+                        </td>
+                        <td>
+                            Boolean
+                        </td>
+                        <td>
+                            Checks if the element to display is a video
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>videoSource</code>
+                        </td>
+                        <td>
+                            Array
+                        </td>
+                        <td>
+                            Contains a hash for each video format with two keys:
+                            <ul>
+                                <li><code>video</code>: Video url</li>
+                                <li><code>type</code>: Video type</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code>isAudio</code>
+                        </td>
+                        <td>
+                            Boolean
+                        </td>
+                        <td>
+                            Checks if the element to display is an audio
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>audioSource</code>
+                        </td>
+                        <td>
+                            Array
+                        </td>
+                        <td>
+                            Contains a hash for each audio format with two keys:
+                            <ul>
+                                <li><code>audio</code>: Audio url</li>
+                                <li><code>type</code>: Audio type</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code>classes</code>
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            Class or set of classes to apply in the warning message
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code>title</code>
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            Used for image, video and audio assets. Represents the <code>alt</code> attribure in
+                            images and the <code>title</code> in the video and audio
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <code>warning</code>
+                        </td>
+                        <td>
+                            String
+                        </td>
+                        <td>
+                            Custom message to display before showing showing actual the content
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <!-- Plain/HTML text -->
+                <h3 class="third__title">Plain/HTML Sample:</h3>
+                <securebox is-text="true" text-source="text.src" title="text.title" classes="bg__lightgray border__gray text__darkgray"></securebox>
+
+                <!-- Image -->
+                <h3 class="third__title">Image Sample:</h3>
+                <securebox
+                        warning="This image might be sensitive content. Click to watch"
+                        is-image="true"
+                        image-source="image.src"
+                        title="image.title"
+                        classes="bg__lightgray border__gray text__darkgray"
+                        ></securebox>
+
+                <!-- Video -->
+                <h3 class="third__title">Video Sample:</h3>
+                <securebox
+                        warning="This video might be sensitive content. Click to play"
+                        is-video="true"
+                        video-source="video.src"
+                        title="video.title"
+                        classes="bg__lightgray border__gray text__darkgray"
+                        ></securebox>
+
+                <!-- Audio -->
+                <h3 class="third__title">Audio Sample:</h3>
+                <securebox
+                        warning="This audio might be sensitive content. Click to play"
+                        is-audio="true"
+                        audio-source="audio.src"
+                        title="audio.title"
+                        classes="bg__lightgray border__gray text__darkgray"
+                        ></securebox>
+            </article>
+            <hr>
+        </div>
+    </div>
+</section>

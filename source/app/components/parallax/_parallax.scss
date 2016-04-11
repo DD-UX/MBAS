@@ -1,0 +1,36 @@
+/*
+ * Parallax page
+ */
+
+.page--parallax {
+  height: 100%;
+  overflow: hidden;
+
+  .article {
+    padding: 0 4em;
+  }
+
+  .approved {
+    top: auto;
+    left: auto;
+    max-width: 300px;
+    display: block;
+    right: 5em;
+  }
+
+  .bg {
+    bottom: 0;
+    top: 0;
+    background: url(#{$img-route}samples/parallax/bg.png) repeat center center;
+    background-size: 50%;
+  }
+
+  .rocket {
+    background: url(#{$img-route}samples/parallax/rocket.png) no-repeat center center;
+    background-size: 84px 130px;
+    top: auto;
+    left: auto;
+    width: 84px;
+    height: 130px;
+  }
+}

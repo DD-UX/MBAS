@@ -1,12 +1,11 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html ng-controller="AppController">
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Boostrap Test" %></title>
+    <title ng-bind="pageTitle"><%= current_page.data.title || "<Angular><Sass><Bootstrap 4><Middleman 4>" %></title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
@@ -14,7 +13,16 @@
     <%= javascript_include_tag :all %>
   </head>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
+  <body class="<%= page_classes %>">    
+    <span ng-cloak ui-view="header">
+      <%= partial "/app/partials/header/_header" %>
+    </span>
+    <div ng-cloak ui-view="main" autoscroll="true">
+      <%= yield %>
+    </div>
+    
+    <!-- Loading Angular Partials -->
+    <%= angular_templates_script 'source/app' %>
+    <%= angular_templates_script 'source/common' %>
   </body>
 </html>

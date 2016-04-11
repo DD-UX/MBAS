@@ -9,16 +9,14 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman-sprockets', '>= 4.0.0.rc.1'
+gem 'middleman-sprockets', '>= 3.4.2'
+
 ## please install this specific version: `gem install middleman-sprockets -v 4.0.0.rc.1`
 gem 'middleman', '>= 4.1.1'
 
 # Sass
 gem 'sass-rails'
 gem 'sass-globbing', '~> 1.1', '>= 1.1.1'
-
-# Livereload
-#gem 'middleman-livereload'
 
 # Bootstrap Core
 gem 'bootstrap', '>=4.0.0.alpha3'
@@ -28,3 +26,8 @@ gem 'middleman-autoprefixer'
 
 # Font Awesome
 gem 'font-awesome-sass'
+
+# Middleman Livereload
+gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
+
+gem 'nokogiri', '>=1.6.8.rc3'

@@ -23,6 +23,7 @@
       'ngCookies',
       'ngSanitize',
       'ngAnimate',
+      'ui.bootstrap',
       'duScroll'
     ])
     .value('duScrollOffset', 60)
@@ -63,8 +64,8 @@
    */
   function AppController($scope, $state) {
     $scope.$on('$stateChangeSuccess', function(event, toState) {
-      $scope.pageTitle = toState.data.pageTitle || 'Angular + Sass Boilerplate';
-      $scope.state = $state.$current.name;
+      $scope.pageTitle = toState.data.pageTitle || 'Bootstrap 4 in action';
+      $scope.state = $state.$current.name;      
     });
   }
 

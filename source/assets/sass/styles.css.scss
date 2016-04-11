@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/*
+ * Bower libraries styles
+ *
+ */
+
+// Basic handmade tools
 @import "functions/**/*";
 @import "mixins/**/*";
 @import "_variables";
@@ -15,12 +21,15 @@
 
 // Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
 @import 'font-awesome';
-
+  
+// Handmade shared components
 @import "shared-components/**/*";
 
+// App Sass Common (directives and stuff)
+@import "../../common/**/*";
+// App Sass Partials
+@import "../../app/partials/**/*";
+// App Sass Components
+@import "../../app/components/**/*";
 
-body {  
-  
-}
-
-
+@import "_general-styles";

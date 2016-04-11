@@ -1,0 +1,12 @@
+<!-- Template for custom checkbox -->
+
+<div class="checkbox checkbox-radio-custom">
+    <label class="clickable">
+        <input name="{{name}}" ng-disabled="disabledIf" type="checkbox" ng-model="model" ng-value="model">
+        <span class="decoy decoy-checkbox {{decoyStyles}}" ng-if="checkIconHtml" ng-bind-html="checkIconHtml"></span>
+        <span class="decoy decoy-checkbox {{decoyStyles}}" ng-if="!checkIconHtml">
+            <i class="fa fa-check text__blue transition"></i>
+        </span>
+        <span ng-if="label" ng-bind="label"></span>
+    </label>
+</div>

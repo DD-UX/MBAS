@@ -1,32 +1,28 @@
 /**
- * Including Some JS Libraries from BOWER
- * /vendor/assets/bower/
+ * You can include libraries from Bower, 
+ * the js files within 'assets/js' 
+ * and all the js files within the app folder
  */
 
-/*
- * Super core files
- */
-//= require angular/angular
+/* Super core files (jQuery, Angular, Bootstrap and dependencies)
+-- */
 //= require jquery/dist/jquery
 
-/*
- * Angular Main Assets
- */
+//= require lodash/lodash.min
+
+//= require angular/angular
 //= require angular-animate/angular-animate
 //= require angular-cookies/angular-cookies
 //= require angular-sanitize/angular-sanitize
-//= require angular-scroll/angular-scroll
 //= require angular-ui-router/release/angular-ui-router
-//= require lodash/lodash.min
+//= require angular-scroll/angular-scroll
+//= require tether/dist/js/tether.min
 
-/*
- * Some other JS libraries
- */
-
-/* Fixed navbar
+/* Bootstrap library
 -- */
-//= require filament-fixed/fixedfixed
-//= require filament-sticky/fixedsticky
+//= require bootstrap
+//= require angular-bootstrap/ui-bootstrap.min
+//= require angular-bootstrap/ui-bootstrap-tpls.min
 
 /* Parallax library
 -- */
@@ -37,7 +33,35 @@
 -- */
 //= require pgwbrowser/_pgwbrowser.min
 
-/*
- * Execute the Angular app
- */
+/* Init Angular App
+-- */
 //= require _app
+
+/* App Partials
+-- */
+//= require partials/_conf.partials
+//= require partials/header/_header
+
+/* App Components
+-- */
+//= require components/_conf.home
+//= require components/home/_home
+//= require components/_conf.environment-detection
+//= require components/environment-detection/_environment-detection
+//= require components/_conf.form-elements
+//= require components/form-elements/_form-elements
+//= require components/_conf.sass-documentation
+//= require components/sass-documentation/_sass-documentation
+//= require components/_conf.securebox
+//= require components/securebox/_securebox
+//= require components/_conf.parallax
+//= require components/parallax/_parallax
+
+/* App Directives (within 'common' folder)
+-- */
+//= require _conf.common
+//= require directives/_body
+//= require directives/securebox-directive/_securebox
+//= require directives/form-elements-custom-directives/_form-elements-custom-directives
+
+

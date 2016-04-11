@@ -5,6 +5,13 @@
 # Require Bootstrap
 require 'bootstrap'
 
+# Require Custom Angular Template
+require File.join root, 'source/helpers/middleman-angular-templates'
+activate :angular_templates
+
+@app_path = File.join root, 'source/app'
+@common_path = File.join root, 'source/common'
+
 # Per-page layout changes:
 #
 # With no layout
@@ -26,26 +33,21 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   # Create Livereload
-#  activate :livereload
+  activate :livereload
   
   # Create pretty urls
   activate :directory_indexes
 
   # Middleman autoprefixer
   activate :autoprefixer
-  
-#  Dir.glob("#{root}/source/app/*/*.erb") do |html_file|
-#    # do work on files ending in .html in the desired directory
-#    puts "#{html_file}"
-#  end
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+#helpers do 
+#  def angular_templates_script
+#
+#  end
+#end
 
 config[:css_dir] = 'assets/sass'
 config[:js_dir] = 'assets/js'
@@ -54,7 +56,7 @@ config[:images_dir] = 'assets/images'
 # Build-specific configuration
 configure :build do
 	# Activate minify HTML
-#	activate :minify_html
+  #	activate :minify_html
 
   # For example, change the Compass output style for deployment
   activate :minify_css
@@ -67,39 +69,38 @@ configure :build do
 end
 
 after_configuration do
-  @app_path = File.join "#{root}", 'source/app'
   sprockets.append_path @app_path
-#  sprockets.append_path '#{root}/app/components'
-#  sprockets.append_path '#{root}/app/partials'
+  sprockets.append_path @common_path
   
   # Bower files
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  @bower_path = File.join "#{root}", @bower_config["directory"]
+  @bower_path = File.join root, @bower_config["directory"]
   sprockets.append_path @bower_path
   
-  puts '----------------------------------------'
-  puts 'BOWER vendor path: \'' + @bower_path + '\''
-  puts ''  
-  puts 'Include BOWER files with Asset Pipelines:'
-  puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
-  puts ''  
-  puts 'CSS:'  
-  puts '/*'
-  puts ' *= require your/dist/css'
-  puts ' */'
-  puts ' at \'source/assets/sass/styles.css.scss\''
-  puts '----------------------------------------'
-  puts 'App folder path: \'' + @app_path + '\''
-  puts ''  
-  puts 'Include APP files with Asset Pipelines:'
-  puts 'JS: //= require _all at \'source/app/_app.js\''
-  puts '----------------------------------------'
-  puts ''
-  puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+#  puts '----------------------------------------'
+#  puts 'BOWER vendor path: \'' + @bower_path + '\''
+#  puts ''  
+#  puts 'Include BOWER files with Asset Pipelines:'
+#  puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
+#  puts ''  
+#  puts 'CSS:'  
+#  puts '/*'
+#  puts ' *= require your/dist/css'
+#  puts ' */'
+#  puts ' at \'source/assets/sass/styles.css.scss\''
+#  puts '----------------------------------------'
+#  puts 'App folder path: \'' + @app_path + '\''
+#  puts 'Common folder path: \'' + @common_path + '\''
+#  puts ''  
+#  puts 'Include APP files with Asset Pipelines:'
+#  puts 'JS: //= require _all at \'source/app/_app.js\''
+#  puts '----------------------------------------'
+#  puts ''
+#  puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 end
 
-puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+#puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 #puts ''
-#puts '        Bootstrap 4 Alpha - Test'
+#puts '   <Angular><Sass><Bootstrap 4><Middleman 4>'
 #puts ''
-
+#puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'

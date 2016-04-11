@@ -1,0 +1,52 @@
+/**
+ * Header (Bootstrap navbar component) styles.
+ * Ref: http://getbootstrap.com/components/#navbar-default
+ * Also watch /src/sass/_bootstrap-variables.scss` for more
+ * changes in the Bootstrap core.
+ */
+
+.header {
+  h1.navbar-brand {
+    margin: 0;
+  }
+  a {
+    @extend .transition;
+  }
+  .navbar-toggle {
+    width: 30px;
+    height: 30px;
+    margin: 12px 20px 0 0;
+
+    .icon-bar {
+      margin: 0;
+      width: 30px;
+      height: 5px;
+      transition: all 400ms ease-in;
+      transform-origin: center center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }
+    // Without this `:not` selector I would have to revert all on `.collapsed`
+    &.navbar-toggle-open {
+      .icon-bar {
+        top: 10px;
+        &:nth-child(1) {
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(315deg);
+        }
+      }
+    }
+  }
+}

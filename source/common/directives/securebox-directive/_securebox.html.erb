@@ -1,0 +1,23 @@
+<!-- Template for securebox -->
+
+<div class="securebox transition" ng-class="{'clickable': !active}">
+
+    <!-- Warning -->
+    <div class="warning {{classes}}" ng-if="!active" ng-bind-html="warning"></div>
+
+    <!-- Plain/HTML text -->
+    <div ng-if="!!active && isText" ng-bind-html="textSource"></div>
+
+    <!-- Images -->
+    <img class="full-responsive" ng-if="!!active && isImage" src="{{imageSource}}" alt="{{title}}">
+
+    <!-- Video -->
+    <video class="full-responsive" ng-if="!!active && isVideo" title="{{title}}" controls>
+        <source ng-repeat="s in videoSource" src="{{s.video}}" type="{{s.type}}"> Your browser does not support video tag.
+    </video>
+
+    <!-- Audio -->
+    <audio class="full-responsive" ng-if="!!active && isAudio" title="{{title}}" controls>
+        <source ng-repeat="s in audioSource" src="{{s.audio}}" type="{{s.type}}"> Your browser does not support audio tag.
+    </audio>
+</div>
