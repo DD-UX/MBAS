@@ -57,7 +57,7 @@ related with Mac OSX "El Capitan"
 * Securebox modules (sensitive content to be loaded only on demand)
 
 ## TO DO <small>2016/04/11</small>:
-* Build process: fix and test output
+* Build process: fix and test output | DONE
 * Finish internal documentation
 * Add multiple sort of transitions in between loading views
 * Minor other fixes
