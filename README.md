@@ -47,3 +47,11 @@ make failed, exit code 2
 
 just execute `bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include`. The issue is 
 related with Mac OSX "El Capitan"
+
+## Sections within the project starter:
+* Welcome/Intro page
+* Sass documentation
+* Form elements (Angular custom directives)
+* Environment (OS/Browser) detection
+* Parallax layouts
+* Securebox modules (sensitive content to be loaded only on demand)
