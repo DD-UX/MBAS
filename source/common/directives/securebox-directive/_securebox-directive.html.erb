@@ -1,9 +1,11 @@
 <!-- Template for securebox -->
 
-<div class="securebox transition" ng-class="{'clickable': !active}">
-
+<div class="securebox transition text-xs-center {{classes}}" ng-class="{'clickable': !active}">
+    <!-- Lock icon -->
+    <i class="fa fa-lock fa-5x"></i>  
+  
     <!-- Warning -->
-    <div class="warning {{classes}}" ng-if="!active" ng-bind-html="warning"></div>
+    <div class="warning" ng-if="!active" ng-bind-html="warning"></div>
 
     <!-- Plain/HTML text -->
     <div ng-if="!!active && isText" ng-bind-html="textSource"></div>
