@@ -42,7 +42,7 @@
         }
       },
       data: {
-        pageTitle: '<Angular><Sass><Bootstrap 4><Middleman 4>'
+        pageTitle: 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
       }
     });
   }
@@ -87,21 +87,7 @@
     // Image sample
     $scope.image = {
       title: 'Some fancy alt',
-      src: 'http://7-themes.com/data_images/out/68/7003841-green-landscape-wallpaper-23020.jpg'
+      src: '/assets/images/securebox/landscape.jpg'
     };
-
-
-
-
-
   }
-
-
-
-
-
-
-
-
-
 })(angular);

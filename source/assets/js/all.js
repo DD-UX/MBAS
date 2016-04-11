@@ -8,7 +8,7 @@
 -- */
 //= require jquery/dist/jquery
 
-//= require lodash/lodash.min
+//= require lodash/dist/lodash.min
 
 //= require angular/angular
 //= require angular-animate/angular-animate
@@ -46,14 +46,19 @@
 -- */
 //= require components/_conf.home
 //= require components/home/_home
+
 //= require components/_conf.environment-detection
 //= require components/environment-detection/_environment-detection
+
 //= require components/_conf.form-elements
 //= require components/form-elements/_form-elements
+
 //= require components/_conf.sass-documentation
 //= require components/sass-documentation/_sass-documentation
+
 //= require components/_conf.securebox
 //= require components/securebox/_securebox
+
 //= require components/_conf.parallax
 //= require components/parallax/_parallax
 

@@ -42,7 +42,7 @@
         }
       },
       data: {
-        pageTitle: '<Angular><Sass><Bootstrap 4><Middleman 4>'
+        pageTitle: 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
       }
     });
   }

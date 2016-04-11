@@ -1,28 +1,14 @@
-<section class="page page--home container-fluid">
+<section class="page page--home container">
     <div class="row">
-        <menu class="col-md-4 hidden-sm hidden-xs sidebar">
-            <ul class="nav nav-pills nav-stacked fixedsticky">
-                <li du-scrollspy="introduction">
-                    <a href="#introduction" class="transition" du-smooth-scroll>Introduction</a>
-                </li>
-                <li du-scrollspy="variables">
-                    <a href="#variables" class="transition" du-smooth-scroll>Variables</a>
-                </li>
-                <li du-scrollspy="functions">
-                    <a href="#functions" class="transition" du-smooth-scroll>Functions</a>
-                </li>
-                <li du-scrollspy="mixins">
-                    <a href="#mixins" class="transition" du-smooth-scroll>Mixins</a>
-                </li>
-                <li du-scrollspy="common">
-                    <a href="#common" class="transition" du-smooth-scroll>Common folder</a>
-                </li>
-                <li du-scrollspy="shared-components">
-                    <a href="#shared-components" class="transition" du-smooth-scroll>Shared components</a>
-                </li>
-                <li du-scrollspy="app">
-                    <a href="#app" class="transition" du-smooth-scroll>App components and partials</a>
-                </li>
+        <menu class="col-md-4 hidden-sm-down sidebar">
+            <ul class="nav nav-pills nav-stacked sticky">
+                <li class="nav-item"><a href="#introduction" du-scrollspy="introduction" class="transition nav-link" du-smooth-scroll>Introduction</a></li>
+                <li class="nav-item"><a href="#variables" du-scrollspy="variables" class="transition nav-link" du-smooth-scroll>Variables</a></li>
+                <li class="nav-item"><a href="#functions" du-scrollspy="functions" class="transition nav-link" du-smooth-scroll>Functions</a></li>
+                <li class="nav-item"><a href="#mixins" du-scrollspy="mixins" class="transition nav-link" du-smooth-scroll>Mixins</a></li>
+                <li class="nav-item"><a href="#shared-components" du-scrollspy="shared-components" class="transition nav-link" du-smooth-scroll>Shared components</a></li>
+                <li class="nav-item"><a href="#common" du-scrollspy="common" class="transition nav-link" du-smooth-scroll>Common folder</a></li>
+                <li class="nav-item"><a href="#app" du-scrollspy="app" class="transition nav-link" du-smooth-scroll>App components and partials</a></li>
             </ul>
         </menu>
         <div class="col-md-8 col-xs-12">
@@ -43,21 +29,18 @@
                 <h2 class="secondary__title">Variables</h2>
                 <p>There are two major files to set variables:</p>
                 <ul>
-                    <li>
-                        <b>_bootstrap-variables.scss</b>: As the name indicates you can access to any of the Bootstrap's
-                        variables and change defaults values before Grunt compiles it.
-                    </li>
-                    <li>
-                        <b>_variables.scss</b>: Used to store any custom Sass variable made by the team.
-                    </li>
+                    <li><b>_bootstrap-variables.scss</b>: As the name indicates you can access to any of the Bootstrap's variables and change defaults values before Middleman compiles it.</li>
+                    <li><b>_variables.scss</b>: Used to store any custom Sass variable made by the team.</li>
                 </ul>
                 <ul class="breadcrumb">
-                    <li>src</li>
+                    <li>source</li>
+                    <li>assets</li>
                     <li>sass</li>
                     <li>_bootstrap-variables.scss</li>
                 </ul>
                 <ul class="breadcrumb">
-                    <li>src</li>
+                    <li>source</li>
+                    <li>assets</li>
                     <li>sass</li>
                     <li>_variables.scss</li>
                 </ul>
@@ -87,17 +70,11 @@
                 <h2 class="secondary__title">Functions</h2>
                 <h6 class="third__title">Input</h6>
                 <ul class="breadcrumb">
-                    <li>src</li>
+                    <li>source</li>
+                    <li>assets</li>
                     <li>sass</li>
                     <li>functions</li>
                     <li>_**.scss</li>
-                </ul>
-                <h6 class="third__title">Output</h6>
-                <ul class="breadcrumb">
-                    <li>src</li>
-                    <li>sass</li>
-                    <li>_compiled-files</li>
-                    <li>_functions.scss</li>
                 </ul>
                 <ul>
                     <li>
@@ -128,17 +105,11 @@
                 <h2 class="secondary__title">Mixins</h2>
                 <h6 class="third__title">Input</h6>
                 <ul class="breadcrumb">
-                    <li>src</li>
+                    <li>source</li>
+                    <li>assets</li>
                     <li>sass</li>
                     <li>mixins</li>
                     <li>_**.scss</li>
-                </ul>
-                <h6 class="third__title">Output</h6>
-                <ul class="breadcrumb">
-                    <li>src</li>
-                    <li>sass</li>
-                    <li>_compiled-files</li>
-                    <li>_mixins.scss</li>
                 </ul>
                 <ul>
                     <li>
@@ -199,60 +170,18 @@
                     </li>
                 </ul>
             </article>
-            <hr>
-            <article id="common" class="article">
-                <h2 class="secondary__title">Common folder</h2>
-                <h6 class="third__title">Input</h6>
-                <ul class="breadcrumb">
-                    <li>src</li>
-                    <li>sass</li>
-                    <li>common</li>
-                    <li>**</li>
-                    <li>_**.scss</li>
-                </ul>
-                <h6 class="third__title">Output</h6>
-                <ul class="breadcrumb">
-                    <li>src</li>
-                    <li>sass</li>
-                    <li>_compiled-files</li>
-                    <li>_common-files.scss</li>
-                </ul>
-
-                <p>These Sass files are related mostly with the directives nested within common folder.</p>
-
-                <ul>
-                    <li>
-                        <b>form-elements-custom</b>: Default styles for custom
-                        <a ui-sref="form-elements" class="transition clickable">Form Elements</a>.
-                    </li>
-                    <li>
-                        <b>securebox</b>: Default styles for
-                        <a ui-sref="securebox" class="transition clickable">Securebox</a> module.
-                    </li>
-                </ul>
-            </article>
-            <hr>
+            <hr>            
             <article id="shared-components" class="article">
                 <h2 class="secondary__title">Shared components</h2>
                 <h6 class="third__title">Input</h6>
                 <ul class="breadcrumb">
-                    <li>src</li>
+                    <li>source</li>
+                    <li>assets</li>
                     <li>sass</li>
                     <li>shared-components</li>
                     <li>_**.scss</li>
                 </ul>
-                <h6 class="third__title">Output</h6>
-                <ul class="breadcrumb">
-                    <li>src</li>
-                    <li>sass</li>
-                    <li>_compiled-files</li>
-                    <li>_shared-components.scss</li>
-                </ul>
                 <ul>
-                    <li>
-                        <b>bootstrap-cols-reformat</b>: Reformat Bootstrap's grid using <code>display:
-                        table-cell;</code> and removing floating, allowing the cols grow together even in older browsers.
-                    </li>
                     <li>
                         <code>.clickable</code>: Class used to make any element act like a link/button. Adds
                         <code>cursor: pointer;</code> and <code>user-select: none;</code>
@@ -409,65 +338,6 @@
                     <li>
                         <code>.parallaxible</code>: class used for elements to compound layouts with parallax effects. Read
                         also <a ui-sref="parallax" class="transition clickable">Parallax</a> source for more information.
-                    </li>
-                    <li>
-                        <b>responsive-video-iframe</b>: CSS technique to make responsive iframe videos. You can also read
-                        <a href="https://benmarshall.me/responsive-iframes/" target="_blank" class="transition clickable">Ben Marshall's doc</a>                        and create Sass helpers.
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Classes</th>
-                                    <th>Description</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>.responsive-video-iframe</code>
-                                    </td>
-                                    <td>
-                                        Video <code>&lt;iframe&gt;</code> wrapper.
-                                    </td>
-                                    <td rowspan="4">
-                                        <code>
-                                        &lt;div class="responsive-video-iframe responsive-video-iframe-16x9"&gt;<br>
-                                        &lt;iframe width="560" height="315"
-                                        src="https://www.youtube.com/embed/5GUPtoiFm5A" frameborder="0"
-                                        allowfullscreen&gt;&lt;/iframe&gt;<br>
-                                        &lt;/div&gt;
-                                    </code>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.responsive-video-iframe-16x9</code>
-                                    </td>
-                                    <td>
-                                        Sets aspect ratio to be 16:9. Should be added to <code>.responsive-video-iframe</code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.responsive-video-iframe-4x3</code>
-                                    </td>
-                                    <td>
-                                        Sets aspect ratio to be 4:3. Should be added to <code>.responsive-video
-                                    -iframe</code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>.iframe</code>,
-                                        <code>&lt;iframe&gt;</code>
-                                    </td>
-                                    <td>
-                                        The actual video
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </li>
                     <li>
                         <b>retina-display</b>: Classes created to interact with retina devices, based on HIDPI
@@ -694,24 +564,41 @@
                 </ul>
             </article>
             <hr>
+            <article id="common" class="article">
+                <h2 class="secondary__title">Common folder</h2>
+                <h6 class="third__title">Input</h6>
+                <ul class="breadcrumb">
+                    <li>source</li>
+                    <li>sass</li>
+                    <li>common</li>
+                    <li>**</li>
+                    <li>_**.scss</li>
+                </ul>
+
+                <p>These Sass files are related mostly with the directives nested within common folder.</p>
+
+                <ul>
+                    <li>
+                        <b>form-elements-custom</b>: Default styles for custom
+                        <a ui-sref="form-elements" class="transition clickable">Form Elements</a>.
+                    </li>
+                    <li>
+                        <b>securebox</b>: Default styles for
+                        <a ui-sref="securebox" class="transition clickable">Securebox</a> module.
+                    </li>
+                </ul>
+            </article>
+            <hr>
             <article id="app" class="article">
                 <h2 class="secondary__title">App components and partials</h2>
                 <h6 class="third__title">Input</h6>
                 <ul class="breadcrumb">
-                    <li>src</li>
+                    <li>source</li>
                     <li>sass</li>
                     <li>app</li>
                     <li>**</li>
                     <li>_**.scss</li>
                 </ul>
-                <h6 class="third__title">Output</h6>
-                <ul class="breadcrumb">
-                    <li>src</li>
-                    <li>sass</li>
-                    <li>_compiled-files</li>
-                    <li>_app-files.scss</li>
-                </ul>
-
             </article>
 
         </div>

@@ -1,13 +1,12 @@
-<section class="page page--form-elements container-fluid">
+<section class="page page--form-elements container">
     <div class="row">
-        <menu class="col-md-4 hidden-sm hidden-xs sidebar">
-            <ul class="nav nav-pills nav-stacked fixedsticky">
-                <li du-scrollspy="custom-form-elements"><a href="#custom-form-elements" class="transition" du-smooth-scroll>Custom form
-                    elements:</a></li>
-                <li du-scrollspy="file-upload"><a href="#file-upload" class="transition" du-smooth-scroll>File upload</a></li>
-                <li du-scrollspy="select"><a href="#select" class="transition" du-smooth-scroll>Select</a></li>
-                <li du-scrollspy="checkbox"><a href="#checkbox" class="transition" du-smooth-scroll>Checkbox</a></li>
-                <li du-scrollspy="radio-button"><a href="#radio-button" class="transition" du-smooth-scroll>Radio button</a></li>
+        <menu class="col-md-4 hidden-sm-down sidebar">
+            <ul class="nav nav-pills nav-stacked sticky">
+                <li class="nav-item"><a href="#custom-form-elements" du-scrollspy="custom-form-elements" class="transition nav-link" du-smooth-scroll>Custom form elements:</a></li>
+                <li class="nav-item"><a href="#file-upload" du-scrollspy="file-upload" class="transition nav-link" du-smooth-scroll>File upload</a></li>
+                <li class="nav-item"><a href="#select" du-scrollspy="select" class="transition nav-link" du-smooth-scroll>Select</a></li>
+                <li class="nav-item"><a href="#checkbox" du-scrollspy="checkbox" class="transition nav-link" du-smooth-scroll>Checkbox</a></li>
+                <li class="nav-item"><a href="#radio-button" du-scrollspy="radio-button" class="transition nav-link" du-smooth-scroll>Radio button</a></li>
             </ul>
         </menu>
         <div class="col-md-8 col-xs-12">
@@ -49,7 +48,7 @@
                             do the magic.
                         </dd>
                         <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
-                            <code>/src/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+                            <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
                             or custom classes written by yourself.
                         </dd>
                         <dd><b>default-msg:</b> (Optional) <code>string</code> placeholder text.</dd>
@@ -92,7 +91,7 @@
                             <code>value</code> (each option's value).
                         </dd>
                         <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
-                            <code>/src/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+                            <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
                             or custom classes written by yourself.
                         </dd>
                         <dd><b>selected-option:</b> Define in the Controller the which <code>options-map</code> is the default's.
@@ -137,7 +136,7 @@
                         <dd><b>name:</b> Just a <code>string</code> to name the field.</dd>
                         <dd><b>model:</b> Pass a <code>model</code> to handle the value</dd>
                         <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
-                            <code>/src/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+                            <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
                             or custom classes written by yourself.
                         </dd>
                         <dd><b>check-icon-html:</b> (Optional) <code>HTML</code> Use any HTML to set up an icon (<code>
@@ -176,7 +175,7 @@
                         <dd><b>name:</b> Just a <code>string</code> to name the field.</dd>
                         <dd><b>model:</b> Pass a <code>model</code> to handle the value</dd>
                         <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
-                            <code>/src/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+                            <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
                             or custom classes written by yourself.
                         </dd>
                         <dd><b>check-icon-html:</b> (Optional) <code>HTML</code> Use any HTML to set up an icon (<code>
