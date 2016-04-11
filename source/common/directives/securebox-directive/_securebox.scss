@@ -4,5 +4,7 @@
 
 .securebox {
   margin-bottom: 1em;
-  padding: 1em;
+  .warning {
+    padding: 1em;
+  }
 }
