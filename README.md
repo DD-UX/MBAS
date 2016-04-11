@@ -1,5 +1,8 @@
 # MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass
-**Middleman environment with Bootstrap 4 Alpha to test and plan a new project starter**
+
+#### Middleman environment with Bootstrap 4 Alpha for layout, Angular to handle the data binding, routing and general UX, and Sass to enhance the developer experience at the moment of coding.
+
+**Important:** Make sure you have installed Ruby, Bundler, Middleman, Bower and Sass.
 
 Dependencies:
 * [Middleman 4](https://middlemanapp.com/)
