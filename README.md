@@ -4,8 +4,8 @@
 Dependencies:
 * [Middleman 4](https://middlemanapp.com/advanced/asset_pipeline/)
 * [Bootstrap 4 Alpha](http://v4-alpha.getbootstrap.com/)
-* [AngularJS](http://v4-alpha.getbootstrap.com/)
-* [Sass](http://v4-alpha.getbootstrap.com/)
+* [AngularJS](https://angularjs.org/)
+* [Sass](http://sass-lang.com/)
 
 
 ## Installing process
@@ -17,6 +17,8 @@ $ bower install
 $ bundle install
 $ bundle exec middleman
 ```
+
+**Once you run the project you will have access to an environment with multiple assets from Sass, Bootstrap 4, custom Angular components and more. Get into it to read the full documentation**
 
 If you have this error while installing Middleman:
 
@@ -37,5 +39,3 @@ make failed, exit code 2
 
 just execute `bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include`. The issue is 
 related with Mac OSX "El Capitan"
-
-## Bootstrap 4 Alpha ([documentation](http://v4-alpha.getbootstrap.com/))
