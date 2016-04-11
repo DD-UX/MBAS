@@ -13,7 +13,6 @@ $y-positions: 'top', 'center', 'bottom';
 @each $x in $x-positions {
   @each $y in $y-positions {
     .transform-#{$x}-#{$y} {
-      -webkit-transform-origin: #{$x} #{$y};
       transform-origin: #{$x} #{$y};
     }
   }

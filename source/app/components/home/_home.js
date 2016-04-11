@@ -34,11 +34,11 @@
       views: {
         'header': {
           controller: 'HeaderController',
-          templateUrl: '/_header.html'
+          templateUrl: '/_header__view.html'
         },
         'main': {
           controller: 'HomeController',
-          templateUrl: '/_home.html'
+          templateUrl: '/_home__view.html'
         }
       },
       data: {

@@ -34,11 +34,11 @@
       views: {
         'header': {
           controller: 'HeaderController',
-          templateUrl: '/_header.html'
+          templateUrl: '/_header__view.html'
         },
         'main': {
           controller: 'SassDocController',
-          templateUrl: '/_sass-documentation.html'
+          templateUrl: '/_sass-documentation__view.html'
         }
       },
       data: {

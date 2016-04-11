@@ -43,11 +43,11 @@
       views: {
         'header': {
           controller: 'HeaderController',
-          templateUrl: '/_header.html'
+          templateUrl: '/_header__view.html'
         },
         'main': {
           controller: 'FormElementsController',
-          templateUrl: '/_form-elements.html'
+          templateUrl: '/_form-elements__view.html'
         }
       },
       data: {

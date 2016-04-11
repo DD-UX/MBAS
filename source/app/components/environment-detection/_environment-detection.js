@@ -34,11 +34,11 @@
       views: {
         'header': {
           controller: 'HeaderController',
-          templateUrl: '/_header.html'
+          templateUrl: '/_header__view.html'
         },
         'main': {
           controller: 'EnvDetectionController',
-          templateUrl: '/_environment-detection.html'
+          templateUrl: '/_environment-detection__view.html'
         }
       },
       data: {

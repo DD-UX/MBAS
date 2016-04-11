@@ -31,7 +31,7 @@
         title: '=?',
         warning: '@'
       },
-      templateUrl: '/_securebox-directive.html',
+      templateUrl: '/_securebox__tpl.html',
       link: function(scope, elem) {
         scope.active = scope.active || false;
         scope.warning = scope.warning || 'This content might be sensitive content. Click to display';

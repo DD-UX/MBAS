@@ -28,7 +28,7 @@
         name: '@',
         caretsHtml: '@'
       },
-      templateUrl: '/custom-select.html'
+      templateUrl: '/_select__tpl.html'
     };
   }
 
@@ -48,7 +48,7 @@
         name: '@',
         checkIconHtml: '@'
       },
-      templateUrl: '/custom-checkbox.html'
+      templateUrl: '/_checkbox__tpl.html'
     };
   }
 
@@ -68,7 +68,7 @@
         name: '@',
         checkIconHtml: '@'
       },
-      templateUrl: '/custom-radio.html'
+      templateUrl: '/_radio__tpl.html'
     };
   }
 
@@ -92,7 +92,7 @@
         name: '@',
         uploadIconHtml: '@'
       },
-      templateUrl: '/custom-file-field.html',
+      templateUrl: '/_file-field__tpl.html',
       link: function(scope, elem) {
         $timeout(function() {
 

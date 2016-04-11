@@ -34,11 +34,11 @@
       views: {
         'header': {
           controller: 'HeaderController',
-          templateUrl: '/_header.html'
+          templateUrl: '/_header__view.html'
         },
         'main': {
           controller: 'SecureboxController',
-          templateUrl: '/_securebox.html'
+          templateUrl: '/_securebox__view.html'
         }
       },
       data: {

@@ -34,11 +34,11 @@
       views: {
         'header': {
           controller: 'HeaderController',
-          templateUrl: '/_header.html'
+          templateUrl: '/_header__view.html'
         },
         'main': {
           controller: 'ParallaxController',
-          templateUrl: '/_parallax.html'
+          templateUrl: '/_parallax__view.html'
         }
       },
       data: {
