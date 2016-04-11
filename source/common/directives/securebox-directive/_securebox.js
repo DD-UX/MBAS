@@ -18,20 +18,20 @@
     return {
       restrict: 'E',
       scope: {
-        active: '=',
-        isText: '=',
-        textSource: '=',
-        isImage: '=',
-        imageSource: '=',
-        isVideo: '=',
-        videoSource: '=',
-        isAudio: '=',
-        audioSource: '=',
+        active: '=?',
+        isText: '=?',
+        textSource: '=?',
+        isImage: '=?',
+        imageSource: '=?',
+        isVideo: '=?',
+        videoSource: '=?',
+        isAudio: '=?',
+        audioSource: '=?',
         classes: '@',
-        title: '=',
+        title: '=?',
         warning: '@'
       },
-      templateUrl: '/_securebox.html',
+      templateUrl: '/_securebox-directive.html',
       link: function(scope, elem) {
         scope.active = scope.active || false;
         scope.warning = scope.warning || 'This content might be sensitive content. Click to display';

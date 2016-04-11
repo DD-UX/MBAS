@@ -4,7 +4,7 @@
   /**
    * Each section of the site has its own module. It probably also has
    * submodules, though this boilerplate is too simple to demonstrate it. Within
-   * `src/app/home`, however, could exist several additional folders representing
+   * `source/app/components/_home`, however, could exist several additional folders representing
    * additional modules that would then be listed as dependencies of this one.
    * For example, a `note` section could have the submodules `note.create`,
    * `note.delete`, `note.edit`, etc.
@@ -56,7 +56,7 @@
    * @constructor
    */
   function EnvDetectionController($scope) {
-    $scope.hello = '';
+
   }
 
 })(angular);
