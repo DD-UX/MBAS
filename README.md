@@ -2,20 +2,25 @@
 
 #### Middleman environment with Bootstrap 4 Alpha for layout, Angular to handle the data binding, routing and general UX, and Sass to enhance the developer experience at the moment of coding.
 
-**Important:** Make sure you have installed Ruby, Bundler, Middleman, Bower and Sass.
-
-Dependencies:
+Main components:
 * [Middleman 4](https://middlemanapp.com/)
 * [Bootstrap 4 Alpha](http://v4-alpha.getbootstrap.com/)
 * [AngularJS](https://angularjs.org/)
 * [Sass](http://sass-lang.com/)
 
+**Important:** Make sure you have installed:
+* [Ruby](https://www.ruby-lang.org/en/documentation/installation/#package-management-systems)
+* [Node](https://nodejs.org/en/)
+* [Middleman](https://middlemanapp.com/)
+* [Bundler](http://bundler.io/)
+* [Bower](http://bower.io/)
+* [Sass](http://sass-lang.com/install)
 
 ## Installing process
 
 Download the repository and execute:
+
 ```
-$ gem install middleman
 $ bower install
 $ bundle install
 $ bundle exec middleman
