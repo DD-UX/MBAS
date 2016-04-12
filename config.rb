@@ -70,6 +70,17 @@ configure :build do
   activate :gzip
 end
 
+# Deploy FTP configuration 
+# Find more options here: https://github.com/middleman-contrib/middleman-deploy
+
+#activate :deploy do |deploy|
+#  deploy.deploy_method   = :ftp
+#  deploy.host            = 'ftp.example.com'
+#  deploy.path            = '/srv/www/site'
+#  deploy.user            = 'tvaughan'
+#  deploy.password        = 'secret'
+#end
+
 after_configuration do
   sprockets.append_path @app_path
   sprockets.append_path @common_path
