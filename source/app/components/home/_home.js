@@ -58,7 +58,7 @@
   function HomeController($scope, $cookies) {
     $scope.welcomeAlerts = $cookies.get('offWelcomeMessage') ? [] : [{
 //    $scope.welcomeAlerts = false ? [] : [{
-      type: 'info',
+      type: 'success',
       msg: '<h2 class="main__title">MBAS (Middleman 4 + Bootstrap 4 + Angular + Sass)</h2>' +
         '<p>The sake of this is to have a wide range of tools and do not recreate the wheel over and over.</p>' +
         '<p>Is plenty of custom elements so please make sure the one you are looking for is not created before code ' +
