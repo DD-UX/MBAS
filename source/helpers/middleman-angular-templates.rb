@@ -15,7 +15,7 @@ module Middleman
               File.open(file, "r") do |infile|
                 file_content = ""
                 while (line = infile.gets)
-                    file_content += "#{line}"
+                  file_content += "#{line}"
                 end
                 
                 parsed_content = ERB.new(file_content).result()

@@ -72,6 +72,7 @@ related with Mac OSX "El Capitan"
 * Serve files gzipped on build | DONE
 * Added .htaccess to serve gzipped files on Apache | DONE
 * Minify HTML too (already done on CSS and JS) | Partially DONE to be improved on Angular templates scripting
+* Parsing ERB code before Angular template scripting injection | DONE
 * Facebook OG and Twitter card meta information
 * Finish internal documentation
 * Minor other fixes
