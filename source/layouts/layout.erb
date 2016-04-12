@@ -11,6 +11,10 @@
 
     <%= stylesheet_link_tag :styles %>
     <%= javascript_include_tag :all %>
+    
+    <!-- Loading Angular Partials -->
+    <%= angular_templates_script 'source/app' %>
+    <%= angular_templates_script 'source/common' %>
   </head>
 
   <body class="<%= page_classes %>">    
@@ -20,9 +24,5 @@
     <div ng-cloak ui-view="main" autoscroll="true" class="wackyTransition">
       <%= yield %>
     </div>
-    
-    <!-- Loading Angular Partials -->
-    <%= angular_templates_script 'source/app' %>
-    <%= angular_templates_script 'source/common' %>
   </body>
 </html>
