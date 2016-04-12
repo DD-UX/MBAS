@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*
+ * Bower libraries styles, invoked before shared 
+ * components just in case we need to overwrite something
+ * -------------------------------------------------
+ *=require animate.css/animate.css
+ * -------------------------------------------------
+ */
+
+// Basic handmade tools
+@import "functions/**/*";
+@import "mixins/**/*";
+@import "_variables";
+
+// Bootstrap override variables
+@import '_bootstrap-variables';
+  
+// Bootstrap: http://getbootstrap.com/
+@import 'bootstrap';
+
+// Font Awesome Sprockets (required for routing fonts properly)
+@import 'font-awesome-sprockets';
+
+// Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
+@import 'font-awesome';
+
+  
+// Handmade shared components
+@import "shared-components/**/*";
+
+// App Sass Common (directives and stuff)
+@import "../../common/**/*";
+// App Sass Partials
+@import "../../app/partials/**/*";
+// App Sass Components
+@import "../../app/components/**/*";
+
+@import "_general-styles";

@@ -1,0 +1,70 @@
+<section class="page page--parallax text__white" sn-skrollr data-start="background-color:rgb(59,151,209);" data-end="background-color:rgb(10,76,118);">
+
+  <div class="bg parallaxible" data-start="transform: translate3d(0, 10%,0); opacity: 0;" data-end="transform: translate3d(0, -10%,0); opacity: 0.6;"></div>
+
+  <div class="bg parallaxible" data-start="transform: translate3d(0, 20%,0) rotate(180deg); opacity: 0.4;" data-end="transform: translate3d(0, -20%,0) rotate(180deg); opacity: 1;"></div>
+
+  <div class="rocket parallaxible transform-left-top" data-start="transform: translate3d(200%, 0%, 0) rotate(280deg) scale(0.5); opacity: 0.6;"
+       data--5000-top="transform: translate3d(-1000%, 400%, 0) rotate(240deg) scale(1); opacity: 1;" data-end="transform: translate3d(-2000%, 600%, 0) rotate(280deg) scale(1.5); opacity: 1;"></div>
+
+  <article class="parallaxible article" data--0-top="transform: translate3d(0,-50%,0) rotate(0deg) scale(1); opacity: 1;" data--1400-top="transform: translate3d(0,-50%,0) rotate(0deg) scale(1); opacity: 1;"
+           data--2600-top="transform: translate3d(0,-500%,0) rotate(359deg) scale(0.2); opacity: 0;">
+    <h2 class="main__title text-center">
+      Have you ever tried to make a Parallax website that works pretty well on scrolling?
+    </h2>
+
+  </article>
+
+  <article class="parallaxible article transform-right-center" data--1200-top="transform: translate3d(500%,-50%,0) scale(0.1, 1);"
+           data--1410-top="transform: translate3d(0%,-50%,0) scale(0.1, 1);" data--2400-top="transform: translate3d(0%,-50%,0) scale(1, 1);"
+           data--4500-top="transform: translate3d(0%,-50%,0) scale(1, 1);" data--5500-top="transform: translate3d(-500%,-50%,0) scale(1.5, 1);">
+    <h2 class="main__title text-center">
+      What if I tell you its very very simple and no extra JS is required
+    </h2>
+  </article>
+
+  <article class="parallaxible article" data--4600-top="transform: translate3d(0,-50%,0); opacity: 0;" data--5800-top="transform: translate3d(0,-50%,0); opacity: 1;"
+           data--6400-top="transform: translate3d(0,-90%,0); opacity: 1;">
+    <h2 class="secondary__title">Let's go with some documentation:</h2>
+
+    <div class="jumbotron text__black">
+      <dl class="notes">
+        <dt class="third__title">Libraries:</dt>
+        <dd class="note">
+          <span class="label label-success">Main library</span>
+          <b><a href="https://github.com/Prinzhorn/skrollr" target="_blank">skrollr:</a></b> Very simple JS library
+          that allows the developer to build robust scrolling parallax effects by using data attributes. Read also
+          <a href="https://github.com/Prinzhorn/skrollr#absolute-vs-relative-mode" target="_blank">
+            different ways to work with
+          </a>.
+        </dd>
+        <dd class="note">
+          <span class="label label-danger">Angular library</span>
+          <b><a href="https://github.com/thisissoon/angular-skrollr" target="_blank">angular-skrollr:</a></b> Provides
+          a directive to execute skrollr and service to config it. See this example on <code>/src/app/components/parallax/parallax.js</code>                    Read also
+          <a href="https://github.com/thisissoon/angular-skrollr#usage" target="_blank">
+            usage
+          </a>.
+        </dd>
+
+      </dl>
+      <p>
+        <span class="label label-info">Hint:</span> Make sure when pass CSS's data attributes to use the same properties
+        and units in values, no matter if is redundant or even default values. The library requires it.
+      </p>
+
+      <p>
+        <code class="hidden-xs hidden-sm">
+          &lt;article class="parallaxible article"<br>
+          data--5800-top="transform: translate3d(0,-50%,0); opacity: 1;"<br>
+          data--6400-top="transform: translate3d(0,-150%,0); opacity: 1;"<br>
+          ...<br>
+          &gt;
+        </code>
+      </p>
+    </div>
+  </article>
+
+  <img src="/assets/images/samples/parallax/approved.jpg" class="parallaxible approved" data--5600-top="bottom: -300px; opacity: 0;"
+       data--6000-top="bottom: 0px; opacity: 1;">
+</section>

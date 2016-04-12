@@ -1,0 +1,208 @@
+<section class="page page--form-elements container">
+  <div class="row">
+    <menu class="col-md-4 hidden-sm-down sidebar">
+      <ul class="nav nav-pills nav-stacked sticky">
+        <li class="nav-item"><a href="#custom-form-elements" du-scrollspy="custom-form-elements" class="transition nav-link" du-smooth-scroll>Custom form elements</a></li>
+        <li class="nav-item"><a href="#file-upload" du-scrollspy="file-upload" class="transition nav-link" du-smooth-scroll>File upload</a></li>
+        <li class="nav-item"><a href="#select" du-scrollspy="select" class="transition nav-link" du-smooth-scroll>Select</a></li>
+        <li class="nav-item"><a href="#checkbox" du-scrollspy="checkbox" class="transition nav-link" du-smooth-scroll>Checkbox</a></li>
+        <li class="nav-item"><a href="#radio-button" du-scrollspy="radio-button" class="transition nav-link" du-smooth-scroll>Radio button</a></li>
+      </ul>
+    </menu>
+    <div class="col-md-8 col-xs-12">
+      <main class="article" id="custom-form-elements">
+        <h2 class="main__title">Custom form elements:</h2>
+
+        <p>Some of the features this project-starter comes with are a bunch of responsive form elements that use to
+          be painful to be written on any project:</p>
+        <ul>
+          <li><b>File upload</b></li>
+          <li><b>Select</b> (form dropdown)</li>
+          <li><b>Checkbox</b></li>
+          <li><b>Radio button</b></li>
+        </ul>
+        <p>All this components are written in <a href="https://docs.angularjs.org/guide/directive" target="_blank">Angular directives</a>                    so are very easy to implement and the best is mobile platforms will pop the form controls for each field
+          so no need to struggle with CSS and MediaQueries for a good UX.</p>
+
+        <p>One last thing, these components are styled using bootstrap variables for <code>padding</code> and
+          <code>border-radius</code> so will look the same as another default form fields.</p>
+      </main>
+      <article class="article" id="file-upload">
+        <div class="well">
+          <h3 class="secondary__title">File upload</h3>
+          <code class="hidden-xs hidden-sm">
+            &lt;custom-file-field
+            <br>&nbsp;&nbsp;name=&quot;dummy-file-field&quot;
+            <br>&nbsp;&nbsp;model=&quot;files&quot;
+            <br>&nbsp;&nbsp;decoy-styles=&quot;&nbsp;text__white&nbsp;bg__gold&quot;
+            <br>&nbsp;&nbsp;default-msg=&quot;Click&nbsp;to&nbsp;select&nbsp;a&nbsp;field&quot;
+            <br>&nbsp;&nbsp;is-multiple=&quot;true&quot;
+            <br>&nbsp;&nbsp;upload-icon-html=&quot;&lt;i&nbsp;class='fa&nbsp;fa-upload'&gt;&lt;/i&gt;&quot;
+            <br>&nbsp;&nbsp;&gt;&lt;/custom-file-field&gt;
+          </code>
+          <dl>
+            <dt>Params:</dt>
+            <dd><b>name:</b> Just a <code>string</code> to name the field.</dd>
+            <dd><b>model:</b> Add a property in the <code>$scope</code> object thru the Controller and pass it. Since
+              angular has no native handler of <code>input[type="file"]</code> the component's directive will
+              do the magic.
+            </dd>
+            <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
+              <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+              or custom classes written by yourself.
+            </dd>
+            <dd><b>default-msg:</b> (Optional) <code>string</code> placeholder text.</dd>
+            <dd><b>is-multiple:</b> <code>boolean</code> attribute to make multiple uploads (
+              <code>false</code> by default).
+            </dd>
+            <dd><b>upload-icon-html:</b> (Optional) <code>HTML</code> Use any HTML to set up an icon (<code>
+              &lt;i class=&quot;fa fa-upload&quot;&gt;&lt;/i&gt;
+              </code> by default).
+            </dd>
+            <dd><b>disabled-if:</b> <code>boolean</code> pass <code>true</code> to disable the field (<code>false
+              </code> by default).
+            </dd>
+          </dl>
+        </div>
+        <div class="form-group">
+          <label>File input</label>
+          <custom-file-field name="dummy-file-field" model="files" decoy-styles=" text__white bg__gold" default-msg="Click to select a field"
+                             is-multiple="true" upload-icon-html="<i class='fa fa-upload'></i>"></custom-file-field>
+        </div>
+      </article>
+      <article class="article" id="select">
+        <div class="well">
+          <h3 class="secondary__title">Select</h3>
+          <code class="hidden-xs hidden-sm">
+            &lt;custom-select
+            <br>&nbsp;&nbsp;name=&quot;select1&quot;
+            <br>&nbsp;&nbsp;selected-option=&quot;defaultSelectedOption&quot;
+            <br>&nbsp;&nbsp;options-map=&quot;selectOptions&quot;
+            <br>&nbsp;&nbsp;disabled-if=&quot;selectDisable&quot;
+            <br>&nbsp;&nbsp;decoy-styles=&quot;bg__blue&nbsp;text__white&nbsp;transition&quot;
+            <br>&nbsp;&nbsp;&gt;&lt;/custom-select&gt;
+          </code>
+          <dl>
+            <dt>Params:</dt>
+            <dd><b>name:</b> Just a <code>string</code> to name the field.</dd>
+            <dd><b>options-map:</b> Array with maps for each option the select will have. Make sure each one has:
+              <code>id</code>,
+              <code>name</code> (text to be displayed on the select) &amp;
+              <code>value</code> (each option's value).
+            </dd>
+            <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
+              <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+              or custom classes written by yourself.
+            </dd>
+            <dd><b>selected-option:</b> Define in the Controller the which <code>options-map</code> is the default's.
+            </dd>
+            <dd><b>carets-html:</b> (Optional) <code>HTML</code> Use any HTML to set up an icon (<code>&lt;i
+              class=&quot;fa fa fa-caret-down text__white&quot;&gt;&lt;/i&gt;
+              </code> by default).
+            </dd>
+            <dd><b>disabled-if:</b> <code>boolean</code> pass <code>true</code> to disable the field (<code>false
+              </code> by default).
+            </dd>
+          </dl>
+        </div>
+        <div class="form-group">
+          <label>Custom Select 1 (default caret)</label>
+          <custom-select name="select1" selected-option="defaultSelectedOption" options-map="selectOptions" disabled-if="selectDisable"
+                         decoy-styles="bg__blue text__white transition"></custom-select>
+        </div>
+
+        <div class="form-group">
+          <label>Custom Select 2 (custom caret)</label>
+          <custom-select name="select2" selected-option="defaultSelectedOption" options-map="selectOptions" decoy-styles="bg__darkblue text__white transition"
+                         carets-html="<i class='fa fa-chevron-down text__white'>"></custom-select>
+        </div>
+      </article>
+
+
+      <article class="article" id="checkbox">
+        <div class="well">
+          <h3 class="secondary__title">Checkbox</h3>
+          <code class="hidden-xs hidden-sm">
+            &lt;custom-checkbox
+            <br>&nbsp;&nbsp;name=&quot;check1&quot;
+            <br>&nbsp;&nbsp;model=&quot;selectDisable&quot;
+            <br>&nbsp;&nbsp;disabled-if=&quot;checkboxDisable&quot;
+            <br>&nbsp;&nbsp;decoy-styles=&quot;decoy-checkbox&nbsp;border__gray&nbsp;transition&quot;
+            <br>&nbsp;&nbsp;label=&quot;Disable/Enable&nbsp;Custom&nbsp;Select&nbsp;1&nbsp;(default&nbsp;checkbox&nbsp;icon)&quot;
+            <br>&nbsp;&nbsp;&gt;&lt;/custom-checkbox&gt;
+          </code>
+          <dl>
+            <dt>Params:</dt>
+            <dd><b>name:</b> Just a <code>string</code> to name the field.</dd>
+            <dd><b>model:</b> Pass a <code>model</code> to handle the value</dd>
+            <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
+              <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+              or custom classes written by yourself.
+            </dd>
+            <dd><b>check-icon-html:</b> (Optional) <code>HTML</code> Use any HTML to set up an icon (<code>
+              &lt;i
+              class=&quot;fa fa fa-check text__blue&quot;&gt;&lt;/i&gt;
+              </code> by default).
+            </dd>
+            <dd><b>label:</b> Checkbox label (it's clickable to toggle the component)</dd>
+            <dd><b>disabled-if:</b> <code>boolean</code> pass <code>true</code> to disable the field (<code>false
+              </code> by default).
+            </dd>
+          </dl>
+        </div>
+        <custom-checkbox name="check1" model="selectDisable" disabled-if="checkboxDisable" decoy-styles="decoy-checkbox border__gray transition"
+                         label="Disable/Enable Custom Select 1 (default checkbox icon)"></custom-checkbox>
+
+        <custom-checkbox name="check2" model="checkboxDisable" decoy-styles="decoy-checkbox border__gold transition" label="Disable/Enable above's checkbox and bellow radio buttons (custom checkbox icon)"
+                         check-icon-html="<i class='fa fa-check-circle text__green transition'></i>"></custom-checkbox>
+      </article>
+
+      <article class="article" id="radio-button">
+        <div class="well">
+          <h3 class="secondary__title">Radio button</h3>
+          <code class="hidden-xs hidden-sm">
+            &lt;custom-radio
+            <br>&nbsp;&nbsp;ng-repeat=&quot;o&nbsp;in&nbsp;radioOptions&nbsp;track&nbsp;by&nbsp;o.id&quot;
+            <br>&nbsp;&nbsp;model=&quot;radioOptions&quot;
+            <br>&nbsp;&nbsp;disabled-if=&quot;checkboxDisable&quot;
+            <br>&nbsp;&nbsp;decoy-styles=&quot;border__gray&nbsp;transition&quot;
+            <br>&nbsp;&nbsp;label=&quot;{{o.name}}&quot;
+            <br>&nbsp;&nbsp;name=&quot;dummy-radios&quot;
+            <br>&nbsp;&nbsp;&gt;&lt;/custom-radio&gt;
+          </code>
+          <dl>
+            <dt>Params:</dt>
+            <dd><b>name:</b> Just a <code>string</code> to name the field.</dd>
+            <dd><b>model:</b> Pass a <code>model</code> to handle the value</dd>
+            <dd><b>decoy-styles:</b> <code>.class</code> You can pass any class from the
+              <code>/source/assets/sass/shared-components/_color-helpers.scss</code> to style how the field would look
+              or custom classes written by yourself.
+            </dd>
+            <dd><b>check-icon-html:</b> (Optional) <code>HTML</code> Use any HTML to set up an icon (<code>
+              &lt;i
+              class=&quot;fa fa fa-check text__blue&quot;&gt;&lt;/i&gt;
+              </code> by default).
+            </dd>
+            <dd><b>disabled-if:</b> <code>boolean</code> pass <code>true</code> to disable the field (<code>false
+              </code> by default).
+            </dd>
+            <dd><b>label:</b> Checkbox label (it's clickable to toggle the component)</dd>
+            <dd><b>ng-repeat:</b> Use it to iterate the <code>model</code> and create a radio button for each hash
+              in the model's array. Make sure each one has: <code>id</code>, <code>name</code> (text to be
+              displayed on the select) &amp; <code>value</code> (each option's value).
+            </dd>
+          </dl>
+        </div>
+
+        <custom-radio ng-repeat="o in radioOptions track by o.id" model="radioOptions" disabled-if="checkboxDisable" decoy-styles="border__gray transition"
+                      label="{{o.name}}" name="dummy-radios"></custom-radio>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </article>
+    </div>
+  </div>
+</section>

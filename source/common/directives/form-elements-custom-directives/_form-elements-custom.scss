@@ -1,0 +1,133 @@
+/**
+ * Form elements custom:
+ * - Checkbox
+ * - Radio button
+ * - Select
+ * - Input file
+ */
+
+// Resetting some Bootstrap styles for default components
+.checkbox label {
+  padding-left: 0;
+}
+
+// Custom Checkbox and Radio button
+.checkbox-radio-custom {
+  .decoy {
+    display: inline-block;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    box-shadow: inset 1px 1px 1px rgba(get_color("black"), 0);
+    overflow: hidden;
+    vertical-align: middle;
+    .fa {
+      opacity: 0;
+    }
+    &.decoy-checkbox {
+      border-radius: 2px;
+      line-height: 15px;
+    }
+    &.decoy-radio {
+      border-radius: 50%;
+      line-height: 50%;
+      .fa {
+        font-size: 7px;
+      }
+    }
+  }
+  [type=radio],
+  [type=checkbox] {
+    display: none;
+    &:checked {
+      & + .decoy-checkbox {
+        box-shadow: inset 1px 1px 1px rgba(get_color("black"), 0.2);
+      }
+      & + .decoy {
+        .fa {
+          opacity: 1;
+        }
+      }
+    }
+    &:disabled {
+      & + .decoy {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+// Custom Select
+.custom-select {
+  position: relative;
+  display: block;
+  select {
+    opacity: 0!important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    &:disabled {
+      ~ .decoy-select {
+        opacity: 0.4;
+      }
+      ~ .carets {
+        opacity: 0!important;
+      }
+    }
+  }
+  .decoy-select {
+    border-radius: $border-radius;
+    padding: $input-padding-y 30px $input-padding-y $input-padding-x;
+    @include text-ellipsis;
+  }
+  .carets {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+    line-height: 200%;
+  }
+}
+
+// Custom File field
+.custom-file-field {
+  display: block;
+  font-weight: normal;
+  position: relative;
+  overflow: hidden;
+  input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 200%;
+    z-index: 1;
+    &:disabled {
+      ~ .decoy-file-field {
+        opacity: 0.4;
+      }
+    }
+  }
+  .decoy-file-field {
+    border-radius: $border-radius;
+    padding: $input-padding-y $input-padding-x;
+    @include text-ellipsis;
+    &.empty {
+
+    }
+    .files-list {
+      margin: 0;
+      padding: 0;
+      .file-item {
+        &:before {
+          content:"\2014 ";
+        }
+      }
+    }
+  }
+}

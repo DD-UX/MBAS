@@ -1,0 +1,13 @@
+/**
+ * `.parallaxible` class for elements used on full parallax views
+ */
+
+.parallaxible {
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  // Centers vertically the element
+  top: 50%;
+  transform: translate3d(0,-50%,0);
+}

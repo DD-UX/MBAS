@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-controller="AppController">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title ng-bind="pageTitle"><%= current_page.data.title || "MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass" %></title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag :styles %>
+    <%= javascript_include_tag :all %>
+    
+    <!-- Loading Angular Partials -->
+    <%= angular_templates_script 'source/app' %>
+    <%= angular_templates_script 'source/common' %>
+  </head>
+
+  <body class="<%= page_classes %>">    
+    <span ng-cloak ui-view="header">
+      <%= partial "/app/partials/header/_header__view" %>
+    </span>
+    <div ng-cloak ui-view="main" autoscroll="true" class="wackyTransition">
+      <%= yield %>
+    </div>
+  </body>
+</html>

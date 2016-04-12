@@ -1,0 +1,34 @@
+{
+  "name": "MBAS",
+  "homepage": "yes",
+  "authors": [
+    "Diego Díaz <diego@diegodiazweb.com>"
+  ],
+  "description": "Middlemam 4 based project with Bootstrap 4, Angular and Sass",
+  "main": "bootstrap4-test",
+  "moduleType": [],
+  "license": "yes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-animate": "~1.4.6",
+    "angular-bootstrap": "~0.13.4",
+    "angular-cookies": "~1.4.6",
+    "angular-sanitize": "~1.4.6",
+    "angular-scroll": "~0.7.2",
+    "angular-ui-router": "~0.2",
+    "jquery": "~2.1.4",
+    "lodash": "~4.9.0",
+    "skrollr": "^0.6.30",
+    "angular-skrollr": "^0.1.5",
+    "tether": "^1.2.0",
+    "animate.css": "^3.5.1"
+  },
+  "devDependencies": {}
+}
