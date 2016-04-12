@@ -7,7 +7,6 @@ require 'bootstrap'
 
 # Require Custom Angular Template
 require File.join root, 'source/helpers/middleman-angular-templates'
-activate :angular_templates
 
 @app_path = File.join root, 'source/app'
 @common_path = File.join root, 'source/common'
@@ -79,6 +78,8 @@ after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   @bower_path = File.join root, @bower_config["directory"]
   sprockets.append_path @bower_path
+  
+  activate :angular_templates
   
   puts ''
   puts '----------------------------------------'
