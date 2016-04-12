@@ -42,7 +42,7 @@
         }
       },
       data: {
-        pageTitle: 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
+        pageTitle: 'Sass documentation | MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
       }
     });
   }

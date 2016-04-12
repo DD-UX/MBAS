@@ -16,6 +16,9 @@
 # Ignore the build directory
 /build
 
+# Ignore the design build
+/design
+
 # Ignore cache
 /.sass-cache
 /.cache
