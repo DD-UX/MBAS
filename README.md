@@ -1,4 +1,6 @@
-# MBAS <small>(alpha)</small> - Middleman 4 + Bootstrap 4 + Angular + Sass
+**Check [MBAS](http://mbas.diegodiazweb.com/) alpha in action!**
+
+# MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass
 
 #### Middleman environment with Bootstrap 4 Alpha for layout, Angular to handle the data binding, routing and general UX, and Sass to enhance the developer experience at the moment of coding.
 
