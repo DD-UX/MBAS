@@ -73,11 +73,12 @@ end
 # Deploy FTP configuration 
 # Find more options here: https://github.com/middleman-contrib/middleman-deploy
 
-#activate :deploy do |deploy|
+#  activate :deploy do |deploy|
+#  deploy.build_before = true
 #  deploy.deploy_method   = :ftp
 #  deploy.host            = 'ftp.example.com'
 #  deploy.path            = '/srv/www/site'
-#  deploy.user            = 'tvaughan'
+#  deploy.user            = 'user'
 #  deploy.password        = 'secret'
 #end
 
