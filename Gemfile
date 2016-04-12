@@ -32,3 +32,6 @@ gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
 
 # Middleman Minify HTML
 gem "middleman-minify-html"
+
+# Middleman Deploy
+gem 'middleman-deploy', git: 'https://github.com/middleman-contrib/middleman-deploy', branch: 'master'
