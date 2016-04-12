@@ -58,12 +58,12 @@ related with Mac OSX "El Capitan"
 * Parallax layouts
 * Securebox modules (sensitive content to be loaded only on demand)
 
-## Build the project will generate just 18 files (plus same amount of **gzipped** files):
+## Build the project will generate just 19 files (plus same amount of **gzipped** files):
 - 6 HTML files (views)
 - 1 CSS file (minified)
 - 1 JS file (minified)
 - 5 Font Awesome fonts
-- 4 Images
+- 5 Images
 - 1 .htaccess (to serve gzipped files in Apache)
 
 ## TO DO <small>2016/04/12</small>:
