@@ -58,9 +58,17 @@ related with Mac OSX "El Capitan"
 * Parallax layouts
 * Securebox modules (sensitive content to be loaded only on demand)
 
+## Build the project will generate just 17 files:
+- 6 HTML files (views)
+- 1 CSS file (minified)
+- 1 JS file (minified)
+- 5 Font Awesome fonts
+- 4 Images
+
 ## TO DO <small>2016/04/12</small>:
 * Build process: fix and test output | DONE
 * Add multiple sort of transitions in between loading views | DONE
+* Compress HTML too (already done on CSS and JS)
 * Facebook OG and Twitter card meta information
 * Finish internal documentation
 * Minor other fixes
