@@ -56,9 +56,10 @@ related with Mac OSX "El Capitan"
 * Parallax layouts
 * Securebox modules (sensitive content to be loaded only on demand)
 
-## TO DO <small>2016/04/11</small>:
+## TO DO <small>2016/04/12</small>:
 * Build process: fix and test output | DONE
+* Add multiple sort of transitions in between loading views | DONE
+* Facebook OG and Twitter card meta information
 * Finish internal documentation
-* Add multiple sort of transitions in between loading views
 * Minor other fixes
 * Extend project starter beyond!

@@ -1,8 +1,10 @@
 @charset "utf-8";
-
 /*
- * Bower libraries styles
- *
+ * Bower libraries styles, invoked before shared 
+ * components just in case we need to overwrite something
+ * -------------------------------------------------
+ *=require animate.css/animate.css
+ * -------------------------------------------------
  */
 
 // Basic handmade tools
@@ -21,6 +23,7 @@
 
 // Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
 @import 'font-awesome';
+
   
 // Handmade shared components
 @import "shared-components/**/*";
