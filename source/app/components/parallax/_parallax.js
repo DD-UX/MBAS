@@ -42,7 +42,7 @@
         }
       },
       data: {
-        pageTitle: 'Parallax all around you!'
+        pageTitle: 'Parallax very easy | MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
       }
     });
 

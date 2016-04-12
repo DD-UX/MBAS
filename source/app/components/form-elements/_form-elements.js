@@ -51,7 +51,7 @@
         }
       },
       data: {
-        pageTitle: 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
+        pageTitle: 'Form elements | MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
       }
     });
   }

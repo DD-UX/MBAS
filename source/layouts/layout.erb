@@ -4,13 +4,29 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    
+    <!-- Facebook OG -->
+    <meta property="og:title" content="<%= current_page.data.title || "MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass" %>">
+    <meta property="og:site_name" content="<%= current_page.data.site_name || "MBAS" %>">
+    <meta property="og:image" content="<%= current_page.data.image_og || "/assets/images/mbas-og.jpg" %>">
+    <meta property="og:url" content="<%= current_page.data.url || "http://mbas.diegodiazweb.com/" %>">
+    <meta property="og:description" content="<%= current_page.data.description || "Middleman contains the project starter, Bootstrap 4 powers layouts, Angular handles the data binding, routing and general UX and Sass enhance the developer experience on coding" %>">
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="<%= current_page.data.type || "app" %>">
+    
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="<%= current_page.data.type || "app" %>">
+    <meta name="twitter:site" content="@diegued">
+    
+    <!-- General meta information -->
+    <meta name="description" content="<%= current_page.data.description || "Middleman contains the project starter, Bootstrap 4 powers layouts, Angular handles the data binding, routing and general UX and Sass enhance the developer experience on coding" %>">
 
     <title ng-bind="pageTitle"><%= current_page.data.title || "MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
     <%= stylesheet_link_tag :styles %>
     <%= javascript_include_tag :all %>
+    
+    <%= favicon_tag 'favicon.jpg' %>
     
     <!-- Loading Angular Partials -->
     <%= angular_templates_script 'source/app' %>

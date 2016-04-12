@@ -42,7 +42,7 @@
         }
       },
       data: {
-        pageTitle: 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
+        pageTitle: 'SecureBox | MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
       }
     });
   }
@@ -87,7 +87,7 @@
     // Image sample
     $scope.image = {
       title: 'Some fancy alt',
-      src: '/assets/images/securebox/landscape.jpg'
+      src: '/assets/images/mbas-og.jpg'
     };
   }
 })(angular);
