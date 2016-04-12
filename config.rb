@@ -55,8 +55,11 @@ config[:images_dir] = 'assets/images'
 
 # Build-specific configuration
 configure :build do
+  # Ignore helpers folder on build
+  ignore 'helpers/*'
+  
 	# Activate minify HTML
-  #	activate :minify_html
+  activate :minify_html
 
   # For example, change the Compass output style for deployment
   activate :minify_css
@@ -65,7 +68,7 @@ configure :build do
   activate :minify_javascript
 
   #Gzip compression
-#  activate :gzip
+  activate :gzip
 end
 
 after_configuration do
@@ -77,30 +80,32 @@ after_configuration do
   @bower_path = File.join root, @bower_config["directory"]
   sprockets.append_path @bower_path
   
-#  puts '----------------------------------------'
-#  puts 'BOWER vendor path: \'' + @bower_path + '\''
-#  puts ''  
-#  puts 'Include BOWER files with Asset Pipelines:'
-#  puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
-#  puts ''  
-#  puts 'CSS:'  
-#  puts '/*'
-#  puts ' *= require your/dist/css'
-#  puts ' */'
-#  puts ' at \'source/assets/sass/styles.css.scss\''
-#  puts '----------------------------------------'
-#  puts 'App folder path: \'' + @app_path + '\''
-#  puts 'Common folder path: \'' + @common_path + '\''
-#  puts ''  
-#  puts 'Include APP files with Asset Pipelines:'
-#  puts 'JS: //= require _all at \'source/app/_app.js\''
-#  puts '----------------------------------------'
-#  puts ''
-#  puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+  puts ''
+  puts '----------------------------------------'
+  puts 'BOWER vendor path: \'' + @bower_path + '\''
+  puts ''  
+  puts 'Include BOWER files with Asset Pipelines:'
+  puts 'JS: //= require jquery/dist/jquery at \'source/assets/js/all.js\''
+  puts ''  
+  puts 'CSS:'  
+  puts '/*'
+  puts ' *= require your/dist/css'
+  puts ' */'
+  puts ' at \'source/assets/sass/styles.css.scss\''
+  puts '----------------------------------------'
+  puts 'App folder path: \'' + @app_path + '\''
+  puts 'Common folder path: \'' + @common_path + '\''
+  puts ''  
+  puts 'Include APP files with Asset Pipelines:'
+  puts 'JS: //= require _all at \'source/app/_app.js\''
+  puts '----------------------------------------'
+  puts ''
+  puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 end
 
-#puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
-#puts ''
-#puts 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
-#puts ''
-#puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+puts ''
+puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+puts ''
+puts 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
+puts ''
+puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'

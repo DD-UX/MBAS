@@ -30,4 +30,5 @@ gem 'font-awesome-sass'
 # Middleman Livereload
 gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
 
-gem 'nokogiri', '>=1.6.8.rc3'
+# Middleman Minify HTML
+gem "middleman-minify-html"

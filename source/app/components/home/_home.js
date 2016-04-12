@@ -4,7 +4,7 @@
   /**
    * Each section of the site has its own module. It probably also has
    * submodules, though this boilerplate is too simple to demonstrate it. Within
-   * `src/app/home`, however, could exist several additional folders representing
+   * `source/app/home`, however, could exist several additional folders representing
    * additional modules that would then be listed as dependencies of this one.
    * For example, a `note` section could have the submodules `note.create`,
    * `note.delete`, `note.edit`, etc.
@@ -58,7 +58,7 @@
   function HomeController($scope, $cookies) {
     $scope.welcomeAlerts = $cookies.get('offWelcomeMessage') ? [] : [{
 //    $scope.welcomeAlerts = false ? [] : [{
-      type: 'info',
+      type: 'success',
       msg: '<h2 class="main__title">MBAS (Middleman 4 + Bootstrap 4 + Angular + Sass)</h2>' +
         '<p>The sake of this is to have a wide range of tools and do not recreate the wheel over and over.</p>' +
         '<p>Is plenty of custom elements so please make sure the one you are looking for is not created before code ' +
