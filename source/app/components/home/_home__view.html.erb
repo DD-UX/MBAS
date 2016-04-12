@@ -3,19 +3,19 @@
     <menu class="col-md-4 hidden-sm-down sidebar">
       <ul class="nav nav-pills nav-stacked sticky">
         <li class="nav-item">
-          <a du-scrollspy="install" href="#install" class="transition nav-link" du-smooth-scroll>Install MBAS</a>
+          <a href="#install" du-scrollspy="install" class="transition nav-link" du-smooth-scroll>Install MBAS</a>
         </li>
         <li class="nav-item">
-          <a du-scrollspy="middleman" href="#middleman" class="transition nav-link" du-smooth-scroll>Middleman 4</a>
+          <a href="#middleman" du-scrollspy="middleman" class="transition nav-link" du-smooth-scroll>Middleman 4</a>
         </li>
         <li class="nav-item">
-          <a du-scrollspy="bootstrap" href="#bootstrap" class="transition nav-link" du-smooth-scroll>Bootstrap 4</a>
+          <a href="#bootstrap" du-scrollspy="bootstrap" class="transition nav-link" du-smooth-scroll>Bootstrap 4</a>
         </li>
         <li class="nav-item">
-          <a du-scrollspy="angular" href="#angular" class="transition nav-link" du-smooth-scroll>AngularJS</a>
+          <a href="#angular" du-scrollspy="angular" class="transition nav-link" du-smooth-scroll>AngularJS</a>
         </li>
         <li class="nav-item">
-          <a du-scrollspy="sass" href="#sass" class="transition nav-link" du-smooth-scroll>Sass</a>
+          <a href="#sass" du-scrollspy="sass" class="transition nav-link" du-smooth-scroll>Sass</a>
         </li>
       </ul>
     </menu>
@@ -24,7 +24,12 @@
         <span ng-bind-html="alert.msg"></span>
       </alert>
       <main id="install" class="article">
-        <h2 class="main__title">MBAS up and running!</h2>
+        <h2 class="main__title">
+          <a href="https://github.com/DD-UX/MBAS/" target="_blank">
+            MBAS up and running!
+            <img width="64" ng-src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png">
+          </a>
+        </h2>
         <dl>
           <dt>To start using this boilerplate we first have to install all the dependencies:</dt>
           <dd><code>$ gem install middleman</code></dd>

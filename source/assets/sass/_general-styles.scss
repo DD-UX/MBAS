@@ -12,7 +12,9 @@ body {
   b {
     font-weight: 600;
   }
-
+  a {
+    @extend .transition;
+  }
   pre {
     white-space: pre-wrap!important;
   }
