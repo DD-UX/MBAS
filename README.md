@@ -4,6 +4,8 @@
 
 #### Middleman environment with Bootstrap 4 Alpha for layout, Angular to handle the data binding, routing and general UX, and Sass to enhance the developer experience at the moment of coding.
 
+![MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass](/source/assets/images/mbas-og.jpg?raw=true "MBAS")
+
 Main components:
 * [Middleman 4](https://middlemanapp.com/)
 * [Bootstrap 4 Alpha](http://v4-alpha.getbootstrap.com/)
