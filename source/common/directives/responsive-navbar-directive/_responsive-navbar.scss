@@ -1,0 +1,87 @@
+/**
+ * Responsive navbar module
+ */
+$dot: 10px;
+.hamburger-toggle {
+  .hamburger-icon {
+    position: relative;
+    width: $dot * 4;
+    height: $dot * 4;
+    display: block;
+    span,
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: $dot;
+      height: $dot;
+      border-radius: $dot;
+      background: get_color('gray');
+      top: 50%;
+      margin-top: -$dot/2;
+      transition: all 400ms ease-in;
+    }
+    span {
+      left: 50%;
+      margin-left: -$dot/2;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      left: 100%;
+      margin-left: -$dot;
+    }
+  }
+  &.active {
+    .hamburger-icon {
+      span,
+      &:before,
+      &:after {
+        left: 50%;
+        margin-left: -$dot/2;        
+      }
+      
+      &:before {
+        top: 0;
+        margin-top: 0;
+      }
+      &:after {
+        top: 100%;
+        margin-top: -$dot;
+      }
+    }
+  }
+}
+
+[responsive-navbar="mobile"]{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 56px;
+  bottom: 0;
+  background: white;
+  z-index: -1;
+  background: get_color('lightgray');
+  box-shadow: inset 1px 1px 10px rgba(black, 0.4);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  .nav-link {
+    display: block;
+    padding: 10px;
+  }
+  .dropdown-menu {
+    position: static;
+    float: none;
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    a {
+      padding: 5px 0;
+      display: block;
+    }
+  }
+}

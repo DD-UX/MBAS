@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-light bg-faded">
   <a class="navbar-brand" href="#" ui-sref="home">MBAS <small class="hidden-sm-down text__gray">Middleman 4 + Bootstrap 4 + Angular + Sass</small></a>
-  <nav>    
+  <nav responsive-navbar="desktop">    
     <ul class="nav navbar-nav pull-right">
       <li class="nav-item dropdown" ng-if="state === 'home'">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -64,8 +64,16 @@
           <li class="dropdown-item"><a href="#" ui-sref="securebox">Securebox modules</a></li>
         </ul>
       </li>
+      <li class="nav-item hamburger-toggle" ng-show="!!isMobileNavLoaded">
+        <span class="clickable hamburger-icon">
+          <span></span>
+        </span>
+      </li>
     </ul>
   </nav>
 </header>
+<nav responsive-navbar="mobile" ng-show="!!isMobileNavLoaded">
+  <ul class="nav nav-stacked"></ul>
+</nav>
 
 

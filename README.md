@@ -76,6 +76,7 @@ related with Mac OSX "El Capitan"
 * Minify HTML too (already done on CSS and JS) | Partially DONE to be improved on Angular templates scripting
 * Parsing ERB code before Angular template scripting injection | DONE
 * Facebook OG and Twitter card meta information | DONE
+* Super responsive navbar feature | In progress
 * Favicon generator
 * Finish internal documentation
 * Minor other fixes
