@@ -5,66 +5,25 @@
  * Try: `text__blue` for color blue, `bg__orange--hover` or `border__green-focus`
  */
 
-@each $name, $color in $color_list {
+$props_list: (
+  'bg': 'background-color',
+  'text': 'color',
+  'border': 'border-color'
+);
 
-  .text__#{$name} {
-    color: $color!important;
+$pseudo_classes: 'hover', 'focus', 'checked', 'active';
+
+// Iterating the colors ($color) and their keys ($name)
+@each $name, $color in $color_list { 
+  // Iterating the properties for the different classes ($prop_property) and their keys ($prop) for naming classes
+  @each $prop, $prop_property in $props_list { 
+    .#{$prop}__#{$name} {
+      #{$prop_property}: $color!important;
+    }
+    @each $pseudo_class in $pseudo_classes { // Iterating different pseudo classes ($pseudo_class)
+      .#{$prop}__#{$name}--#{$pseudo_class}:#{$pseudo_class} {
+        #{$prop_property}: $color!important;
+      }
+    }
   }
-
-  .text__#{$name}--hover:hover {
-    color: $color!important;
-  }
-
-  .text__#{$name}--focus:focus {
-    color: $color!important;
-  }
-
-  .text__#{$name}--checked:checked {
-    color: $color!important;
-  }
-
-  .text__#{$name}--active:active {
-    color: $color!important;
-  }
-
-  .bg__#{$name} {
-    background-color: $color!important;
-  }
-
-  .bg__#{$name}--hover:hover {
-    background-color: $color!important;
-  }
-
-  .bg__#{$name}--focus:focus {
-    background-color: $color!important;
-  }
-
-  .bg__#{$name}--checked:checked {
-    background-color: $color!important;
-  }
-
-  .bg__#{$name}--active:active {
-    background-color: $color!important;
-  }
-
-  .border__#{$name} {
-    border: solid 1px $color!important;
-  }
-
-  .border__#{$name}--hover:hover {
-    border: solid 1px $color!important;
-  }
-
-  .border__#{$name}--focus:focus {
-    border: solid 1px $color!important;
-  }
-
-  .border__#{$name}--checked:checked {
-    border: solid 1px $color!important;
-  }
-
-  .border__#{$name}--active:active {
-    border: solid 1px $color!important;
-  }
-
 }

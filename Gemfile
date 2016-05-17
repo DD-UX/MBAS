@@ -25,7 +25,7 @@ gem 'bootstrap', '>=4.0.0.alpha3'
 gem 'middleman-autoprefixer'
 
 # Font Awesome
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.6.2'
 
 # Middleman Livereload
 gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
