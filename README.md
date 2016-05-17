@@ -50,7 +50,9 @@ make failed, exit code 2
 ```
 
 just execute `bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include`. The issue is 
-related with Mac OSX "El Capitan"
+related with Mac OSX "El Capitan".
+
+If you have any issue in Mac running `$ bower install` run `$ sudo bower update -a` instead.
 
 ## Sections within the project starter:
 * Welcome/Intro page

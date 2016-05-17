@@ -67,7 +67,6 @@
 //= require _conf.common
 //= require directives/_body
 //= require directives/securebox-directive/_securebox
-//= require directives/responsive-navbar-directive/_responsive-navbar
 //= require directives/form-elements-custom-directives/_form-elements-custom-directives
 
 

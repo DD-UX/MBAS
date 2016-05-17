@@ -17,6 +17,11 @@ body {
   }
   pre {
     white-space: pre-wrap!important;
+    @extend .bg__lightgray;
+    @extend .text__darkgray;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px get_color('gray');
   }
 
   .nav > li > a:focus {
@@ -29,6 +34,7 @@ body {
   .article {
     display: block;
   }
+  
   .sidebar {
     position: relative;
     .sticky {
@@ -37,3 +43,8 @@ body {
   }
 }
 
+.dropdown-item {
+  &.active {
+    a {color: inherit;}
+  }
+}
