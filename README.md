@@ -92,5 +92,5 @@ If you have any issue in Mac running `$ bower install` run `$ sudo bower update 
 * [Middleman deploy tool](https://github.com/middleman-contrib/middleman-deploy) | DONE with FTP sample integration
 * Super responsive navbar feature | In progress
 * Favicon generator
-* Finish internal documentation
+* Update and finish internal documentation
 * Extend project starter beyond!
