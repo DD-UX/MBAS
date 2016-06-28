@@ -30,6 +30,12 @@ $ bundle install
 $ bundle exec middleman
 ```
 
+If you can't install bower try running:
+
+```
+$ sudo bower update -a
+```
+
 **Once you run the project you will have access to an environment with multiple assets from Sass, Bootstrap 4, custom Angular components and more. Get into it to read the full documentation**
 
 If you have this error while installing Middleman:

@@ -55,19 +55,18 @@
   }
 
   // Add injections for AppController
-  AppController.$inject = ['$scope', '$state'];
+  AppController.$inject = ['$scope', '$state', 'snSkrollr'];
 
   /**
    * AppController main controller of the app
    * @param $scope
    * @constructor
    */
-  function AppController($scope, $state) {
+  function AppController($scope, $state, snSkrollr) {
     $scope.$on('$stateChangeSuccess', function(event, toState) {
       $scope.pageTitle = toState.data.pageTitle || 'Bootstrap 4 in action';
       $scope.$state = $state;
-      console.log($state);
-      $scope.state = $state.$current.self.name;      
+      $scope.state = $state.$current.self.name;
     });
   }
 

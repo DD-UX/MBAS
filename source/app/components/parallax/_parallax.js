@@ -16,7 +16,7 @@
    * specified, as shown below.
    */
   var module = window.mainApp + '.parallax';
-  angular.module(module)
+  angular.module(module, ["sn.skrollr"])
 
   /**
    * Each section or module of the site can also have its own routes. AngularJS
@@ -24,7 +24,7 @@
    * this way makes each module more "self-contained".
    */
   .config(Config)
-    .controller('ParallaxController', ParallaxController);
+  .controller('ParallaxController', ParallaxController);
 
   Config.$inject = ['$stateProvider', 'snSkrollrProvider'];
 
@@ -33,8 +33,8 @@
       url: '/parallax',
       views: {
         'header': {
-          controller: 'HeaderController',
-          templateUrl: '/_header__view.html'
+          controller: null,
+          templateUrl: null
         },
         'main': {
           controller: 'ParallaxController',
@@ -47,21 +47,25 @@
     });
 
     // Skrollr Parallax library
-    snSkrollrProvider.config = {
-      smoothScrolling: true
-    };
+    snSkrollrProvider.config = { smoothScrolling: true };
   }
 
   //Adding injections for ParallaxController
-  ParallaxController.$inject = ['$scope'];
+  ParallaxController.$inject = ['$scope', 'snSkrollr', '$state'];
 
   /**
    * ParallaxController
    * @param $scope
    * @constructor
    */
-  function ParallaxController($scope) {
-
+  function ParallaxController($scope, snSkrollr, $state) {    
+    $scope.$on('$stateChangeSuccess', function(event, toState) {
+      if ($scope.state !== 'parallax') {
+        snSkrollr.destroy();
+      } else {
+        snSkrollr.init();
+      }
+    });
   }
 
 
