@@ -26,5 +26,5 @@
 # Ignore .DS_store file
 .DS_Store
 
-# Ignore Deploy credentials
-#/source/helpers/deploy-settings.yml
+# Ignore Deploy settings
+/source/helpers/deploy-settings.yml
