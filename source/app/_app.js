@@ -65,7 +65,9 @@
   function AppController($scope, $state) {
     $scope.$on('$stateChangeSuccess', function(event, toState) {
       $scope.pageTitle = toState.data.pageTitle || 'Bootstrap 4 in action';
-      $scope.state = $state.$current.name;      
+      $scope.$state = $state;
+      console.log($state);
+      $scope.state = $state.$current.self.name;      
     });
   }
 

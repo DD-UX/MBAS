@@ -12,22 +12,14 @@ module Middleman
               route = Pathname.new(File.basename(file, '.*'))
               source = Pathname(config.source)
               
-              File.open(file, "r") do |infile|
-                file_content = ""
-                while (line = infile.gets)
-                  file_content += "#{line}"
-                end
-                
-                parsed_content = ERB.new(file_content).result()
-                
-                html << content_tag(
-                  :script,
-                  parsed_content,
-                  type: 'text/ng-template',
-                  id: "/#{route}"
-                )
-              end
-
+              parsed_content = ERB.new(File.read(file)).result(binding)
+              
+              html << content_tag(
+                :script,
+                parsed_content,
+                type: 'text/ng-template',
+                id: "/#{route}"
+              )
             end
           end
 

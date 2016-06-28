@@ -62,11 +62,20 @@
 //= require components/_conf.parallax
 //= require components/parallax/_parallax
 
+//= require components/_conf.game
+//= require components/game/_game
+
+//= require _conf.common
+
 /* App Directives (within 'common' folder)
 -- */
-//= require _conf.common
 //= require directives/_body
 //= require directives/securebox-directive/_securebox
 //= require directives/form-elements-custom-directives/_form-elements-custom-directives
+
+
+/* App Services (within 'common' folder)
+-- */
+//= require services/game/_generate-steps
 
 
