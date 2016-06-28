@@ -4,7 +4,7 @@
   /**
    * Each section of the site has its own module. It probably also has
    * submodules, though this boilerplate is too simple to demonstrate it. Within
-   * `source/app/components/_parallax`, however, could exist several additional folders representing
+   * `source/app/game`, however, could exist several additional folders representing
    * additional modules that would then be listed as dependencies of this one.
    * For example, a `note` section could have the submodules `note.create`,
    * `note.delete`, `note.edit`, etc.
@@ -15,8 +15,10 @@
    * The dependencies block here is also where component dependencies should be
    * specified, as shown below.
    */
-  var module = window.mainApp + '.parallax';
-  angular.module(module, ["sn.skrollr"])
+  var module = window.mainApp + '.game';
+  angular.registerModule(module, ['ui.router']);
+  
+  angular.module(module)
 
   /**
    * Each section or module of the site can also have its own routes. AngularJS
@@ -24,56 +26,50 @@
    * this way makes each module more "self-contained".
    */
   .config(Config)
-  .controller('ParallaxController', ParallaxController);
+  .controller('GameController', GameController);
 
-  Config.$inject = ['$stateProvider', 'snSkrollrProvider'];
+  Config.$inject = ['$stateProvider'];
 
-  function Config($stateProvider, snSkrollrProvider) {
-    $stateProvider.state('parallax', {
-      url: '/parallax',
+  function Config($stateProvider) {
+    $stateProvider.state('game', {
+      url: '/game',
       views: {
         'header': {
           controller: null,
           templateUrl: null
         },
         'main': {
-          controller: 'ParallaxController',
-          templateUrl: '/_parallax__view.html'
+          controller: 'GameController',
+          templateUrl: '/_game__view.html'
         }
       },
       data: {
-        pageTitle: 'Parallax very easy | MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
+        pageTitle: 'Game'
       }
     });
-
-    // Skrollr Parallax library
-    snSkrollrProvider.config = { smoothScrolling: true };
   }
 
-  //Adding injections for ParallaxController
-  ParallaxController.$inject = ['$scope', 'snSkrollr', '$state'];
+  //Adding injections for GameController
+  GameController.$inject = ['$scope', '$cookies', 'generateSteps'];
 
   /**
-   * ParallaxController
+   * GameController
    * @param $scope
    * @constructor
    */
-  function ParallaxController($scope, snSkrollr, $state) {    
-    $scope.$on('$stateChangeSuccess', function(event, toState) {
-      if ($scope.state !== 'parallax') {
-        snSkrollr.destroy();
-      } else {
-        snSkrollr.init();
-      }
-    });
+  function GameController($scope, $cookies, generateSteps) {
+    
+    // Generate a Step element
+    generateSteps.generateStep();
+    
+    // Check for steps already generated
+    console.log(generateSteps.steps);
+    
+    // Generate another Step element
+    generateSteps.generateStep();
+    
+    // Check again for steps generated
+    console.log(generateSteps.steps);
   }
-
-
-
-
-
-
-
-
 
 })(angular);

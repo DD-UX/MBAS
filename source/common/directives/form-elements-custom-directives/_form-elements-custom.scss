@@ -21,6 +21,7 @@
     box-shadow: inset 1px 1px 1px rgba(get_color("black"), 0);
     overflow: hidden;
     vertical-align: middle;
+    border: solid 1px;
     .fa {
       opacity: 0;
     }

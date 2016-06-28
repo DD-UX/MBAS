@@ -8,7 +8,8 @@
 $props_list: (
   'bg': 'background-color',
   'text': 'color',
-  'border': 'border-color'
+  'border-color': 'border-color',
+  'border': 'border'
 );
 
 $pseudo_classes: 'hover', 'focus', 'checked', 'active';

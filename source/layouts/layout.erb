@@ -34,7 +34,7 @@
   </head>
 
   <body class="<%= page_classes %>">    
-    <span ng-cloak ui-view="header">
+    <span ng-cloak ui-view="header" ng-hide="$state.current.views.header.controller === null">
       <%= partial "/app/partials/header/_header__view" %>
     </span>
     <div ng-cloak ui-view="main" autoscroll="true" class="wackyTransition animated">
