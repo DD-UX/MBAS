@@ -36,6 +36,11 @@ If you can't install bower try running:
 $ sudo bower update -a
 ```
 
+In case you run `bundle update` make sure you after edit Gemfile.lock with Sprockets 4.0.0.rc.1 and run:
+```
+$ gem install middleman-sprockets -v 4.0.0.rc.1
+```
+
 **Once you run the project you will have access to an environment with multiple assets from Sass, Bootstrap 4, custom Angular components and more. Get into it to read the full documentation**
 
 If you have this error while installing Middleman:
@@ -76,16 +81,16 @@ If you have any issue in Mac running `$ bower install` run `$ sudo bower update 
 - 5 Images
 - 1 .htaccess (to serve gzipped files in Apache)
 
-## TO DO <small>2016/04/12</small>:
+## TO DO <small>2016/06/28</small>:
 * Build process: fix and test output | DONE
 * Add multiple sort of transitions in between loading views | DONE
 * Serve files gzipped on build | DONE
 * Added .htaccess to serve gzipped files on Apache | DONE
-* Minify HTML too (already done on CSS and JS) | Partially DONE to be improved on Angular templates scripting
-* Parsing ERB code before Angular template scripting injection | DONE
+* Parsing ERB into Angular templates for scripting injection plus Ruby helper methods compatibility | DONE
+* Minify HTML too (already done on CSS and JS) | DONE to be improved on Angular templates scripting
 * Facebook OG and Twitter card meta information | DONE
+* [Middleman deploy tool](https://github.com/middleman-contrib/middleman-deploy) | DONE with FTP sample integration
 * Super responsive navbar feature | In progress
 * Favicon generator
 * Finish internal documentation
-* Minor other fixes
 * Extend project starter beyond!
