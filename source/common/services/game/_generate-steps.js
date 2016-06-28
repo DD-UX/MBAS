@@ -6,7 +6,7 @@
   /**
    * Service generate pieces in the game
    */
-  angular.module(module, [])
+  angular.module(module)
     .service('generateSteps', generateSteps);
 
 //  GenerateSteps.$inject = ['snSkrollr'];

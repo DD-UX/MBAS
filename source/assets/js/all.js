@@ -69,7 +69,7 @@
 
 /* App Directives (within 'common' folder)
 -- */
-//= require directives/_body
+
 //= require directives/securebox-directive/_securebox
 //= require directives/form-elements-custom-directives/_form-elements-custom-directives
 
