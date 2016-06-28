@@ -11,7 +11,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman-sprockets', '>= 3.4.2'
 
-## please install this specific version: `gem install middleman-sprockets -v 4.0.0.rc.1`
+## please install this specific version after you update bundle: `gem install middleman-sprockets -v 4.0.0.rc.1`
 gem 'middleman', '>= 4.1.1'
 
 # Sass

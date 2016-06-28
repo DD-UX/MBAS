@@ -1,0 +1,7 @@
+# Deploy settings (FTP version)
+---
+host: ftp.somedomain.com
+path: /public_html/some/path
+user: le_user
+password: le_password
+---

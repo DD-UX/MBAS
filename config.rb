@@ -8,6 +8,11 @@ require 'bootstrap'
 # Require Custom Angular Template
 require File.join root, 'source/helpers/middleman-angular-templates'
 
+# Require Deploy settings
+require 'yaml'
+deploy_settings = YAML.load_file(File.join root, 'source/helpers/deploy-settings.yml')
+
+# Routes for Angular files
 @app_path = File.join root, 'source/app'
 @common_path = File.join root, 'source/common'
 
@@ -43,9 +48,7 @@ end
 
 # Methods defined in the helpers block are available in templates
 #helpers do 
-#  def angular_templates_script
-#
-#  end
+
 #end
 
 config[:css_dir] = 'assets/sass'
@@ -69,18 +72,6 @@ configure :build do
   #Gzip compression
   activate :gzip
 end
-
-# Deploy FTP configuration 
-# Find more options here: https://github.com/middleman-contrib/middleman-deploy
-
-#  activate :deploy do |deploy|
-#  deploy.build_before = true
-#  deploy.deploy_method   = :ftp
-#  deploy.host            = 'ftp.example.com'
-#  deploy.path            = '/srv/www/site'
-#  deploy.user            = 'user'
-#  deploy.password        = 'secret'
-#end
 
 after_configuration do
   sprockets.append_path @app_path
@@ -122,3 +113,18 @@ puts ''
 puts 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
 puts ''
 puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+
+
+## Deploy FTP configuration 
+# Find more options here: https://github.com/middleman-contrib/middleman-deploy
+# `deploy-settings.yml` is in the root of the project
+# .gitignore is configured to avoid uploading YAML config file so you can save credentials only locally
+
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.deploy_method   = :ftp
+  deploy.host            = deploy_settings["host"].inspect.gsub!(/\A"|"\Z/, '')
+  deploy.path            = deploy_settings["path"].inspect.gsub!(/\A"|"\Z/, '')
+  deploy.user            = deploy_settings["user"].inspect.gsub!(/\A"|"\Z/, '')
+  deploy.password        = deploy_settings["password"].inspect.gsub!(/\A"|"\Z/, '')
+end
