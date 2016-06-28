@@ -1,7 +1,7 @@
 (function(angular) {
   'use strict';
   //Define Main Module name
-  window.mainApp = 'starter';
+  window.mainApp = 'mbas';
 
 
   // Add a new vertical module registration
@@ -18,7 +18,7 @@
   };
 
 
-  angular.module('starter', [
+  angular.module('mbas', [
       'ui.router',
       'ngCookies',
       'ngSanitize',
