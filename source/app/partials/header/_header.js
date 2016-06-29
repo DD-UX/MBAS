@@ -17,7 +17,40 @@
    * @constructor
    */
   function HeaderController($scope) {
-    // Place your controller's code here
+    // Menu elements
+    $scope.menu = [
+      {
+        name: "Sass documentation",
+        sref: "sass-documentation",
+        order: 0,
+        width: 'auto'
+      },
+      {
+        name: "Form elements",
+        sref: "form-elements",
+        order: 0,
+        width: 'auto'
+      },
+      {
+        name: "Environment detection",
+        sref: "environment-detection",
+        order: 0,
+        width: 'auto'
+      },
+      {
+        name: "Parallax layout",
+        sref: "parallax",
+        order: 0,
+        width: 'auto'
+      },
+      {
+        name: "Securebox modules",
+        sref: "securebox",
+        order: 0,
+        width: 'auto'
+      }
+      
+    ];
   }
 
 

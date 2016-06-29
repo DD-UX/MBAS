@@ -71,6 +71,7 @@
 -- */
 
 //= require directives/securebox-directive/_securebox
+//= require directives/responsive-menu-directive/_responsive-menu
 //= require directives/form-elements-custom-directives/_form-elements-custom-directives
 
 

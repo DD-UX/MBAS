@@ -1,0 +1,15 @@
+<!-- Template for Responsive Menu -->
+<nav class="responsive-menu">
+  <ul class="nav navbar-nav pull-right">
+    <li class="nav-item" ng-repeat="element in menuElements track by $index">
+      <a class="nav-link {{classes}}" href="#" ui-sref="{{element.sref}}" ng-bind-template="{{element.name}}"></a>
+    </li>
+<!--
+    <li class="nav-item hamburger-toggle" ng-show="!!isMobileNavLoaded">
+      <span class="clickable hamburger-icon">
+        <span></span>
+      </span>
+    </li>
+-->
+  </ul>
+</nav>
