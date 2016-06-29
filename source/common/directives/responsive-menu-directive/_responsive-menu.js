@@ -76,6 +76,9 @@
             if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements.desktop) ) {
               // Execute when nav overlaps the logo
               scope.menuElements.mobile.push(scope.menuElements.desktop.pop());
+              if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements.desktop) ) {
+                processNav();                
+              }
             }
             
             // Apply changes in the scope
@@ -96,7 +99,7 @@
           });
 
           
-        }, 500);
+        });
       }
     };
   }
