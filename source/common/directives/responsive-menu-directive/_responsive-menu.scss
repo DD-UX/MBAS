@@ -1,10 +1,83 @@
 /**
- * Graybox module
+ * Responsive menu hamburger icon
  */
 
-.securebox {
-  margin-bottom: 1em;
-  .warning {
-    padding: 1em;
+$hamburger_bullet_size: 5px;
+
+.responsive-menu {
+  .hamburger-toggle {
+    .hamburger-icon {
+      position: relative;
+      height: 40px;
+      width: 23px;
+      @extend .transition;
+      .hamburger-icon-bullet {
+        left: 50%;
+        margin-left: -$hamburger_bullet_size/2;
+      }
+      .hamburger-icon-bullet, &:before, &:after {
+        content: "";
+        display: block;
+        background: get_color('green');
+        width: $hamburger_bullet_size; 
+        height: $hamburger_bullet_size;
+        position: absolute;
+        top: 50%;
+        margin-top: -$hamburger_bullet_size / 2;
+        border-radius: 50%;
+      }      
+      &:before {
+        left: 0;
+      }      
+      &:after {
+        left: 100%;
+        margin-left: -$hamburger_bullet_size;
+      }
+    }
+    
+    &.active {
+      .hamburger-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  @extend .transition;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: get-color('chalk');
+  border-right: solid 1px get-color('gray');
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  &.opened {
+    width: 40%;
+    min-width: 240px;
+  }
+  
+  .scrollable {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .nav {
+    overflow: auto;
+    .nav-item {
+      border-top: solid 1px get-color('white');
+      border-bottom: solid 1px get-color('gray');
+      &:first-child {
+        border-top: none;
+      }
+      .nav-link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
   }
 }
