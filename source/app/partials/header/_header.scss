@@ -1,48 +1,44 @@
 /**
- * Header (Bootstrap navbar component) styles.
- * Ref: http://getbootstrap.com/components/#navbar-default
- * Also watch /source/assets/sass/_bootstrap-variables.scss` for more
- * changes in the Bootstrap core.
+ * Header styles
+ * Responsive menu hamburger icon
  */
 
-.header {
-  h1.navbar-brand {
-    margin: 0;
-  }
-  .navbar-toggle {
-    width: 30px;
-    height: 30px;
-    margin: 12px 20px 0 0;
+$hamburger_bullet_size: 5px;
 
-    .icon-bar {
-      margin: 0;
-      width: 30px;
-      height: 5px;
-      transition: all 400ms ease-in;
-      transform-origin: center center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      &:nth-child(2) {
-        top: 10px;
+.responsive-menu {
+  .hamburger-toggle {
+    .hamburger-icon {
+      position: relative;
+      height: 40px;
+      width: 23px;
+      @extend .transition;
+      .hamburger-icon-bullet {
+        left: 50%;
+        margin-left: -$hamburger_bullet_size/2;
       }
-      &:nth-child(3) {
-        top: 20px;
+      .hamburger-icon-bullet, &:before, &:after {
+        content: "";
+        display: block;
+        background: get_color('green');
+        width: $hamburger_bullet_size; 
+        height: $hamburger_bullet_size;
+        position: absolute;
+        top: 50%;
+        margin-top: -$hamburger_bullet_size / 2;
+        border-radius: 50%;
+      }      
+      &:before {
+        left: 0;
+      }      
+      &:after {
+        left: 100%;
+        margin-left: -$hamburger_bullet_size;
       }
     }
-    // Without this `:not` selector I would have to revert all on `.collapsed`
-    &.navbar-toggle-open {
-      .icon-bar {
-        top: 10px;
-        &:nth-child(1) {
-          opacity: 0;
-        }
-        &:nth-child(2) {
-          transform: rotate(45deg);
-        }
-        &:nth-child(3) {
-          transform: rotate(315deg);
-        }
+    
+    &.active {
+      .hamburger-icon {
+        transform: rotate(90deg);
       }
     }
   }

@@ -72,12 +72,12 @@
     
     // OS and Browser detection library
     function initEnvDetection() {
-//      $scope.envDetection = $.pgwBrowser();
-//      console.info('User Agent: ', $scope.envDetection.userAgent);          
-//      console.info('Browser Name: ', $scope.envDetection.browser.name);
-//      console.info('Browser Full Version: ', $scope.envDetection.browser.fullVersion);          
-//      console.info('OS Name: ', $scope.envDetection.os.name);
-//      console.info('OS Full Version: ', $scope.envDetection.os.fullVersion);
+      $scope.envDetection = $.pgwBrowser();
+      console.info('User Agent: ', $scope.envDetection.userAgent);          
+      console.info('Browser Name: ', $scope.envDetection.browser.name);
+      console.info('Browser Full Version: ', $scope.envDetection.browser.fullVersion);          
+      console.info('OS Name: ', $scope.envDetection.os.name);
+      console.info('OS Full Version: ', $scope.envDetection.os.fullVersion);
     }
     initEnvDetection();
 

@@ -1,17 +1,22 @@
 <!-- Template for Responsive Menu -->
 <nav class="responsive-menu">
   <ul class="nav navbar-nav pull-right">
-    <li class="nav-item" ng-repeat="element in menuElements track by $index">
+    <li class="nav-item" ng-repeat="element in menuElements.desktop | orderBy:'order' track by $index">
       <a class="nav-link {{classes}}" href="#" ui-sref="{{element.sref}}" ng-bind-template="{{element.name}}"></a>
     </li>
-    <li class="nav-item hamburger-toggle">
-      <span class="clickable hamburger-icon">
-        <span class="nav-link">Mobile</span>
-      </span>
+    <li class="nav-item hamburger-toggle clickable" ng-class="{'active': isOpen}" ng-click="isOpen = !isOpen" ng-show="!isMobileEmpty">
+      <div class="hamburger-icon">
+        <span class="hamburger-icon-bullet"></span>
+      </div>
+      <span class="sr-only">Mobile Menu</span>
     </li>
   </ul>
 </nav>
 
-<nav class="mobile-menu" ng-hide="mobileMenu">
-  
+<nav class="mobile-menu" ng-show="isOpen">
+  <ul class="nav">
+    <li class="nav-item" ng-repeat="element in menuElements.mobile | orderBy:'order':true track by $index">
+      <a class="nav-link {{classes}}" href="#" ui-sref="{{element.sref}}" ng-bind-template="{{element.name}}"></a>
+    </li>
+  </ul>
 </nav>
