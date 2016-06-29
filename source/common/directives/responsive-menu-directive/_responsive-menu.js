@@ -22,7 +22,8 @@
       scope: {
         isActive: '=?',
         anchorClasses: '@',
-        menuElements: '='
+        menuElements: '=',
+        menuMobileElements: '='
       },
       templateUrl: '/_responsive-menu__tpl.html',
       link: function(scope, elem) {
@@ -35,32 +36,57 @@
           
           // Add `width` property to each menu element
           _.forEach(scope.menuElements, function(value, key){
-            value.width = elem.find('.nav-item').eq(key).width();
+            value.width = elem.find('.nav-item').eq(key).outerWidth(true);
           });
           
+          // Uncomment to compare the sum of the nav elements with navbar width (desktop)
+//          console.log("Widths sum: ", _.sumBy(scope.menuElements, 'width'));
+//          console.log("Nav width: ", nav.width());
+          
           // Uncomment and see new processed menu with widths
-          //// console.log(scope.menuElements);
+//          console.log(scope.menuElements);
           
           function processNav(extraDistance){
-            var logoOffset = logo.offset().left + logo[0].offsetWidth,
-                navOffset = nav.offset().left + extraDistance;
+            extraDistance = extraDistance || 50;
             
-            if ( _.gte(navOffset, logoOffset) ){
-              console.log(navOffset);
-              console.log(logoOffset);              
-            } else {
-              console.log("reached");
+            var logoEnd = logo.offset().left + logo[0].offsetWidth,
+                navOffset = nav.offset().left - extraDistance;
+            
+            // Checking Navbar has width or returning the function
+            if (nav.width() === 0) {
+              return;
             }
+            
+            // Checking if navbar overlaps the logo
+            if ( !_.isEmpty(scope.menuMobileElements) ){
+              
+              if ( _.lt(
+                    logoEnd + _.last(scope.menuMobileElements).width
+                    , navOffset
+                ) ){
+                  // Execute when nav is not overlapping the logo
+                  scope.menuElements.push(scope.menuMobileElements.pop());
+                }
+                            
+            }
+            
+            if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements) ) {
+              // Execute when nav overlaps the logo
+              scope.menuMobileElements.push(scope.menuElements.pop());
+              console.log(_.last(scope.menuMobileElements).width);
+            }
+            
+            scope.$apply();
           }
           
           
           
           // Process Responsive menu on init
-          processNav(10);
+          processNav();
           
           // Process Responsive menu on resize
           $w.bind('resize.doResize', function() {
-            processNav(10);         
+            processNav();         
           });
           
           scope.$on("$destroy",function (){

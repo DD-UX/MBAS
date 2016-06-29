@@ -22,35 +22,31 @@
       {
         name: "Sass documentation",
         sref: "sass-documentation",
-        order: 0,
-        width: 'auto'
+        order: 0
       },
       {
         name: "Form elements",
         sref: "form-elements",
-        order: 0,
-        width: 'auto'
+        order: 0
       },
       {
         name: "Environment detection",
         sref: "environment-detection",
-        order: 0,
-        width: 'auto'
+        order: 0
       },
       {
         name: "Parallax layout",
         sref: "parallax",
-        order: 0,
-        width: 'auto'
+        order: 0
       },
       {
         name: "Securebox modules",
         sref: "securebox",
-        order: 0,
-        width: 'auto'
+        order: 0
       }
-      
     ];
+    
+    $scope.mobileMenu = [];
   }
 
 
