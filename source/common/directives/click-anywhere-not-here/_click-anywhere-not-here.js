@@ -20,19 +20,22 @@
     return {
       restrict: 'A',
       link: function(scope, elem, attr) {
-        elem.on("click", function(e){
+        // Prevent any propagation on clicking directive elements
+        elem.on("click.notHere", function(e){
           e.stopImmediatePropagation();
         });
         
+        // Method bypassed in directive attribute
         function applyMethod(){
-          console.log("sdasd");
           scope.$apply(attr.clickAnywhereNotHere);
         }
         
+        // On click event execute method bypassed
         $document.on('click', applyMethod);
         
+        // On destroy detach events
         scope.$on('$destroy', function(){
-          elem.off('click');
+          elem.off('click.notHere');
           $document.off('click', applyMethod);
         });
         
