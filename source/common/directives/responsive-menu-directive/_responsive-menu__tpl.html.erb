@@ -4,7 +4,7 @@
     <li class="nav-item" ng-repeat="element in menuElements.desktop | orderBy:'order' track by $index">
       <a class="nav-link {{classes}}" href="#" ui-sref="{{element.sref}}" ng-bind-template="{{element.name}}"></a>
     </li>
-    <li class="nav-item hamburger-toggle clickable" ng-class="{'active': isOpen}" ng-click="isOpen = !isOpen" ng-show="!isMobileEmpty">
+    <li class="nav-item hamburger-toggle clickable" ng-class="{'active': menuElements.is_open}" ng-click="menuElements.is_open = !menuElements.is_open" ng-show="!isMobileEmpty" click-anywhere-not-here="closeMenu()">
       <div class="hamburger-icon">
         <span class="hamburger-icon-bullet"></span>
       </div>
@@ -13,7 +13,7 @@
   </ul>
 </nav>
 
-<nav class="mobile-menu" ng-class="{'opened': isOpen}" role="navigation" ng-show="!isMobileEmpty">
+<nav class="mobile-menu" ng-class="{'opened': menuElements.is_open}" role="navigation" ng-show="!isMobileEmpty" click-anywhere-not-here="closeMenu()">
   <div class="col-md-10 col-md-offset-1 col-xs-12 scrollable">
     <%= image_tag 'favicon.jpg', :class => "img-fluid mobile-logo" %>
     <ul class="nav">

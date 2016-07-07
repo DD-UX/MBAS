@@ -3,7 +3,7 @@
 
   var module = window.mainApp + '.common';
   /**
-   * Directive to format the `body` depending presence of some elements
+   * Directive to handle the responsive menu
    */
   angular.module(module)
     .directive('responsiveMenu', ResponsiveMenu);
@@ -13,7 +13,7 @@
 
   /**
    * responsive menu component
-   * @returns {{restrict: string, scope: {isActive: boolean, classes: string, menuElements: object}, templateUrl: string}}
+   * @returns {{restrict: string, scope: {anchorClasses: string, menuElements: object}, templateUrl: string}}
    * @constructor
    */
   function ResponsiveMenu($window, $timeout) {
@@ -28,6 +28,10 @@
         // if menuElements is not defined stop the execution
         if (_.isUndefined( scope.menuElements ) ){
           return;
+        }
+        
+        scope.closeMenu = function(){
+          scope.menuElements.is_open = false;
         }
         
         $timeout(function(){
@@ -70,12 +74,13 @@
                   // Execute when nav is not overlapping the logo
                   scope.menuElements.desktop.push(scope.menuElements.mobile.pop());
                 }
-                            
             }
             
             if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements.desktop) ) {
               // Execute when nav overlaps the logo
               scope.menuElements.mobile.push(scope.menuElements.desktop.pop());
+              logoEnd = logo.offset().left + logo[0].offsetWidth;
+              navOffset = nav.offset().left - extraDistance;
               if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements.desktop) ) {
                 processNav();                
               }

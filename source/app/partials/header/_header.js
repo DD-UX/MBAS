@@ -46,7 +46,8 @@
           order: 0
         }
       ],
-      mobile: []
+      mobile: [],
+      is_open: false
     };
   }
 

@@ -45,19 +45,20 @@ $hamburger_bullet_size: 5px;
 
 .mobile-menu {
   @extend .transition;
+  transform: translateX(-100%);
   overflow: hidden;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 0;
+  width: 40%;
+  min-width: 240px;
   background: get-color('chalk');
   border-right: solid 1px get-color('gray');
   padding-top: 1rem;
   padding-bottom: 1rem;
   &.opened {
-    width: 40%;
-    min-width: 240px;
+    transform: translateX(0);	  
   }
   
   .scrollable {
