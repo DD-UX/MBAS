@@ -17,8 +17,8 @@
   <div class="col-md-10 col-md-offset-1 col-xs-12 scrollable">
     <%= image_tag 'favicon.jpg', :class => "img-fluid mobile-logo" %>
     <ul class="nav">
-      <li class="nav-item" ng-repeat="element in menuElements.mobile | orderBy:'order':true track by $index">
-        <a class="nav-link {{classes}}" href="#" ui-sref="{{element.sref}}" ng-bind-template="{{element.name}}"></a>
+      <li class="nav-item" ng-repeat="element in menuElements.mobile | orderBy:'order':true">
+        <a class="nav-link {{classes}}" ui-sref="{{element.sref}}" ng-bind-template="{{element.name}}"></a>
       </li>
     </ul>
   </div>
