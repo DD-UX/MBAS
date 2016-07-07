@@ -30,7 +30,7 @@ $ bundle install
 $ bundle exec middleman
 ```
 
-If you can't install bower try running:
+If you can't `$ bower install` try running:
 
 ```
 $ sudo bower update -a
@@ -63,8 +63,6 @@ make failed, exit code 2
 just execute `bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include`. The issue is 
 related with Mac OSX "El Capitan".
 
-If you have any issue in Mac running `$ bower install` run `$ sudo bower update -a` instead.
-
 ## Sections within the project starter:
 * Welcome/Intro page
 * Sass documentation
@@ -73,7 +71,7 @@ If you have any issue in Mac running `$ bower install` run `$ sudo bower update 
 * Parallax layouts
 * Securebox modules (sensitive content to be loaded only on demand)
 
-## Build the project will generate just 19 files (plus same amount of **gzipped** files):
+## Build the project will generate just 19 files (plus **gzipped** files):
 - 6 HTML files (views)
 - 1 CSS file (minified)
 - 1 JS file (minified)
@@ -81,7 +79,7 @@ If you have any issue in Mac running `$ bower install` run `$ sudo bower update 
 - 5 Images
 - 1 .htaccess (to serve gzipped files in Apache)
 
-## TO DO <small>2016/06/28</small>:
+## TO DO <small>2016/07/07</small>:
 * Build process: fix and test output | DONE
 * Add multiple sort of transitions in between loading views | DONE
 * Serve files gzipped on build | DONE
@@ -90,7 +88,7 @@ If you have any issue in Mac running `$ bower install` run `$ sudo bower update 
 * Minify HTML too (already done on CSS and JS) | DONE to be improved on Angular templates scripting
 * Facebook OG and Twitter card meta information | DONE
 * [Middleman deploy tool](https://github.com/middleman-contrib/middleman-deploy) | DONE with FTP sample integration
-* Super responsive navbar feature | In progress
+* Super responsive navbar feature | DONE
 * Favicon generator
-* Update and finish internal documentation
+* Update internal documentation
 * Extend project starter beyond!
