@@ -19,7 +19,7 @@ $pseudo_classes: 'hover', 'focus', 'checked', 'active';
   // Iterating the properties for the different classes ($prop_property) and their keys ($prop) for naming classes
   @each $prop, $prop_property in $props_list { 
     .#{$prop}__#{$name} {
-      @if #{$prop} == "border" {
+      @if $prop == border {
         #{$prop_property}: solid 1px $color!important;
       } @else {
         #{$prop_property}: $color!important;
@@ -27,7 +27,11 @@ $pseudo_classes: 'hover', 'focus', 'checked', 'active';
     }
     @each $pseudo_class in $pseudo_classes { // Iterating different pseudo classes ($pseudo_class)
       .#{$prop}__#{$name}--#{$pseudo_class}:#{$pseudo_class} {
-        #{$prop_property}: $color!important;
+        @if #{$prop} == "border" {
+          #{$prop_property}: solid 1px $color!important;
+        } @else {
+          #{$prop_property}: $color!important;
+        }
       }
     }
   }
