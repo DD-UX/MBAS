@@ -78,18 +78,15 @@
             // Apply changes in the scope
             scope.isMobileEmpty = _.isEmpty(scope.menuElements.mobile);
             scope.$apply();
-          }
+          }          
           
-          // Process Responsive menu on init
-          processNav();
-          
-          // Process Responsive menu on resize
-          $w.bind('resize.doResize', function() {
+          // Process Responsive menu on resize and trigger to init
+          $w.on('resize.processNav', function() {
             processNav();         
-          });
+          }).trigger('resize.processNav');
           
           scope.$on("$destroy",function (){
-            $w.off("resize.doResize"); //remove the handler added earlier
+            $w.off("resize.processNav"); //remove the handler added earlier
           });
 
           
