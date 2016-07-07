@@ -64,27 +64,16 @@
               return;
             }
             
-            // Checking if navbar overlaps the logo
-            if ( !_.isEmpty(scope.menuElements.mobile) ){
-              // Checking for enough space to bring back some menu element
-              if ( _.lt(
-                    logoEnd + _.last(scope.menuElements.mobile).width
-                    , navOffset
-                ) ){
-                  // Execute when nav is not overlapping the logo
-                  scope.menuElements.desktop.push(scope.menuElements.mobile.pop());
-                }
-            }
-            
-            if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements.desktop) ) {
-              // Execute when nav overlaps the logo
+            // If mobile has elements let's check if can bring some element back into desktop && Checking for enough space to bring back some menu element
+            if ( !_.isEmpty(scope.menuElements.mobile) && _.lt(logoEnd + _.last(scope.menuElements.mobile).width, navOffset) ){
+              // Execute when nav is not overlapping the logo
+              scope.menuElements.desktop.push(scope.menuElements.mobile.pop());
+            }            
+            // Execute when nav overlaps the logo
+            else if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements.desktop) ) {
               scope.menuElements.mobile.push(scope.menuElements.desktop.pop());
-              logoEnd = logo.offset().left + logo[0].offsetWidth;
-              navOffset = nav.offset().left - extraDistance;
-              if ( _.lt(navOffset, logoEnd) && !_.isEmpty(scope.menuElements.desktop) ) {
-                processNav();                
-              }
-            }
+              processNav();
+            } else {return;}
             
             // Apply changes in the scope
             scope.isMobileEmpty = _.isEmpty(scope.menuElements.mobile);
