@@ -27,7 +27,7 @@ $pseudo_classes: 'hover', 'focus', 'checked', 'active';
     }
     @each $pseudo_class in $pseudo_classes { // Iterating different pseudo classes ($pseudo_class)
       .#{$prop}__#{$name}--#{$pseudo_class}:#{$pseudo_class} {
-        @if #{$prop} == "border" {
+        @if $prop == border {
           #{$prop_property}: solid 1px $color!important;
         } @else {
           #{$prop_property}: $color!important;
