@@ -114,7 +114,6 @@ puts 'MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass'
 puts ''
 puts '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 
-
 ## Deploy FTP configuration 
 # Find more options here: https://github.com/middleman-contrib/middleman-deploy
 # `deploy-settings.yml` is in the root of the project

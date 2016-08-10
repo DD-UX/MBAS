@@ -4,6 +4,7 @@
  * components just in case we need to overwrite something
  * -------------------------------------------------
  *=require animate.css/animate.css
+ *=require angular-bootstrap/ui-bootstrap-csp.css
  * -------------------------------------------------
  */
 
@@ -18,6 +19,15 @@
 // Bootstrap: http://getbootstrap.com/
 @import 'bootstrap';
 
+/**
+ * Screen breakpoints from Bootstrap
+ */
+
+$screen-lg: map-get($grid-breakpoints, 'lg');
+$screen-md: map-get($grid-breakpoints, 'md');
+$screen-sm: map-get($grid-breakpoints, 'sm');
+$screen-xs: map-get($grid-breakpoints, 'xs');
+
 // Font Awesome Sprockets (required for routing fonts properly)
 @import 'font-awesome-sprockets';
 
@@ -27,11 +37,12 @@
 // Handmade shared components
 @import "shared-components/**/*";
 
+// General settings
+@import "_general-styles";
+
 // App Sass Common (directives and stuff)
 @import "../../common/**/*";
 // App Sass Partials
 @import "../../app/partials/**/*";
 // App Sass Components
 @import "../../app/components/**/*";
-
-@import "_general-styles";

@@ -30,16 +30,22 @@ body {
 }
 
 .page {
-  padding-top: 60px;
+  padding-top: 50px;
   .article {
     display: block;
   }
   
   .sidebar {
+    padding-top: 20px;
     position: relative;
+    background-color: get_color('cream');
+    margin: 0;
     .sticky {
       position: fixed;
     }
+  }
+  .content {
+    padding-top: 20px;
   }
 }
 

@@ -1,15 +1,15 @@
-<section class="page page--form-elements container">
+<section class="page page--form-elements container-fluid">
   <div class="row">
-    <menu class="col-md-4 hidden-sm-down sidebar" du-spy-context>
+    <menu class="col-lg-3 col-md-4 hidden-sm-down sidebar" data-du-spy-context>
       <ul class="nav nav-pills nav-stacked sticky">
-        <li class="nav-item"><a href="#custom-form-elements" du-scrollspy="custom-form-elements" class="transition nav-link" du-smooth-scroll>Custom form elements</a></li>
-        <li class="nav-item"><a href="#file-upload" du-scrollspy="file-upload" class="transition nav-link" du-smooth-scroll>File upload</a></li>
-        <li class="nav-item"><a href="#select" du-scrollspy="select" class="transition nav-link" du-smooth-scroll>Select</a></li>
-        <li class="nav-item"><a href="#checkbox" du-scrollspy="checkbox" class="transition nav-link" du-smooth-scroll>Checkbox</a></li>
-        <li class="nav-item"><a href="#radio-button" du-scrollspy="radio-button" class="transition nav-link" du-smooth-scroll>Radio button</a></li>
+        <li class="nav-item"><a href="#custom-form-elements" data-du-scrollspy="custom-form-elements" class="transition nav-link" data-du-smooth-scroll>Custom form elements</a></li>
+        <li class="nav-item"><a href="#file-upload" data-du-scrollspy="file-upload" class="transition nav-link" data-du-smooth-scroll>File upload</a></li>
+        <li class="nav-item"><a href="#select" data-du-scrollspy="select" class="transition nav-link" data-du-smooth-scroll>Select</a></li>
+        <li class="nav-item"><a href="#checkbox" data-du-scrollspy="checkbox" class="transition nav-link" data-du-smooth-scroll>Checkbox</a></li>
+        <li class="nav-item"><a href="#radio-button" data-du-scrollspy="radio-button" class="transition nav-link" data-du-smooth-scroll>Radio button</a></li>
       </ul>
     </menu>
-    <div class="col-md-8 col-xs-12">
+    <div class="col-lg-9 col-md-8 col-xs-12 content">
       <main class="article" id="custom-form-elements">
         <h2 class="main__title">Custom form elements:</h2>
 
@@ -66,8 +66,7 @@
         </div>
         <div class="form-group">
           <label>File input</label>
-          <custom-file-field name="dummy-file-field" model="files" decoy-styles=" text__white bg__gold" default-msg="Click to select a field"
-                             is-multiple="true" upload-icon-html="<i class='fa fa-upload'></i>"></custom-file-field>
+          <custom-file-field data-name="dummy-file-field" data-model="files" data-decoy-styles=" text__white bg__gold" data-default-msg="Click to select a field" data-is-multiple="true" data-upload-icon-html="<i class='fa fa-upload'></i>"></custom-file-field>
         </div>
       </article>
       <article class="article" id="select">
@@ -107,14 +106,12 @@
         </div>
         <div class="form-group">
           <label>Custom Select 1 (default caret)</label>
-          <custom-select name="select1" selected-option="defaultSelectedOption" options-map="selectOptions" disabled-if="selectDisable"
-                         decoy-styles="bg__blue text__white transition"></custom-select>
+          <custom-select data-name="select1" data-selected-option="defaultSelectedOption" data-options-map="selectOptions" data-disabled-if="selectDisable" data-decoy-styles="bg__blue text__white transition"></custom-select>
         </div>
 
         <div class="form-group">
           <label>Custom Select 2 (custom caret)</label>
-          <custom-select name="select2" selected-option="defaultSelectedOption" options-map="selectOptions" decoy-styles="bg__darkblue text__white transition"
-                         carets-html="<i class='fa fa-chevron-down text__white'>"></custom-select>
+          <custom-select data-name="select2" data-selected-option="defaultSelectedOption" data-options-map="selectOptions" data-decoy-styles="bg__darkblue text__white transition" data-carets-html="<i class='fa fa-chevron-down text__white'>"></custom-select>
         </div>
       </article>
 
@@ -150,11 +147,9 @@
             </dd>
           </dl>
         </div>
-        <custom-checkbox name="check1" model="selectDisable" disabled-if="checkboxDisable" decoy-styles="decoy-checkbox border__gray transition"
-                         label="Disable/Enable Custom Select 1 (default checkbox icon)"></custom-checkbox>
+        <custom-checkbox data-name="check1" data-model="selectDisable" data-disabled-if="checkboxDisable" data-decoy-styles="decoy-checkbox border__gray transition" data-label="Disable/Enable Custom Select 1 (default checkbox icon)"></custom-checkbox>
 
-        <custom-checkbox name="check2" model="checkboxDisable" decoy-styles="decoy-checkbox border__gold transition" label="Disable/Enable above's checkbox and bellow radio buttons (custom checkbox icon)"
-                         check-icon-html="<i class='fa fa-check-circle text__green transition'></i>"></custom-checkbox>
+        <custom-checkbox data-name="check2" data-model="checkboxDisable" data-decoy-styles="decoy-checkbox border__gold transition" data-label="Disable/Enable above's checkbox and bellow radio buttons (custom checkbox icon)" data-check-icon-html="<i class='fa fa-check-circle text__green transition'></i>"></custom-checkbox>
       </article>
 
       <article class="article" id="radio-button">
@@ -194,8 +189,7 @@
           </dl>
         </div>
 
-        <custom-radio ng-repeat="o in radioOptions track by o.id" model="radioOptions" disabled-if="checkboxDisable" decoy-styles="border__gray transition"
-                      label="{{o.name}}" name="dummy-radios"></custom-radio>
+        <custom-radio data-ng-repeat="o in radioOptions track by o.id" data-model="radioOptions" data-disabled-if="checkboxDisable" data-decoy-styles="border__gray transition" data-label="{{o.name}}" data-name="dummy-radios"></custom-radio>
         <br>
         <br>
         <br>

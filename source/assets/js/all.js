@@ -21,7 +21,6 @@
 /* Bootstrap library
 -- */
 //= require bootstrap
-//= require angular-bootstrap/ui-bootstrap.min
 //= require angular-bootstrap/ui-bootstrap-tpls.min
 
 /* Parallax library
@@ -62,9 +61,6 @@
 //= require components/_conf.parallax
 //= require components/parallax/_parallax
 
-//= require components/_conf.game
-//= require components/game/_game
-
 //= require _conf.common
 
 /* App Directives (within 'common' folder)
@@ -74,10 +70,5 @@
 //= require directives/click-anywhere-not-here/_click-anywhere-not-here
 //= require directives/responsive-menu-directive/_responsive-menu
 //= require directives/form-elements-custom-directives/_form-elements-custom-directives
-
-
-/* App Services (within 'common' folder)
--- */
-//= require services/game/_generate-steps
 
 

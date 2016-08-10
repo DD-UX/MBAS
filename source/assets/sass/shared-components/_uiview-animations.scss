@@ -1,6 +1,6 @@
 /**
  * `[ui-view="main"]` is the vessel of the angular views.
- * By using ng-enter + ng-leave classes we can animate
+ * By using data-ng-enter + data-ng-leave classes we can animate
  * the enter and exit of them.
  * I'm using Animate.css library (included with Bower)
  * for animations.

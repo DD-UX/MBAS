@@ -41,6 +41,11 @@ In case you run `bundle update` make sure you after edit Gemfile.lock with Sproc
 $ gem install middleman-sprockets -v 4.0.0.rc.1
 ```
 
+If you can't install new gems in MacOS El Capitan and you can't, alternatively do it this way
+```
+sudo gem install -n /usr/local/bin GEM_NAME_HERE
+```
+
 **Once you run the project you will have access to an environment with multiple assets from Sass, Bootstrap 4, custom Angular components and more. Get into it to read the full documentation**
 
 If you have this error while installing Middleman:

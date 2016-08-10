@@ -81,14 +81,14 @@
     }
     initEnvDetection();
 
-    angular.element(window).on('PgwBrowser::StopResizing', function() {
-      initEnvDetection();
-      $scope.$applyAsync();
-    });
+    // $(window).on('PgwBrowser::StopResizing', function() {
+    //   initEnvDetection();
+    //   $scope.$applyAsync();
+    // });
   }
 
   //Then define the init function for starting up the application
-  angular.element(document).ready(function() {
+  $(document).ready(function() {
     //Fixing facebook bug with redirect
     if (window.location.hash === '#_=_') {
       window.location.hash = '';

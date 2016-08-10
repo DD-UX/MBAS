@@ -2,11 +2,11 @@
 
 <div class="checkbox checkbox-radio-custom">
   <label class="clickable">
-    <input name="{{name}}" ng-disabled="disabledIf" type="checkbox" ng-model="model" ng-value="model">
-    <span class="decoy decoy-checkbox {{decoyStyles}}" ng-if="checkIconHtml" ng-bind-html="checkIconHtml"></span>
-    <span class="decoy decoy-checkbox {{decoyStyles}}" ng-if="!checkIconHtml">
+    <input name="{{name}}" data-ng-disabled="disabledIf" type="checkbox" data-ng-model="model" data-ng-value="model">
+    <span class="decoy decoy-checkbox {{decoyStyles}}" data-ng-if="checkIconHtml" data-ng-bind-html="checkIconHtml"></span>
+    <span class="decoy decoy-checkbox {{decoyStyles}}" data-ng-if="!checkIconHtml">
       <i class="fa fa-check text__blue transition"></i>
     </span>
-    <span ng-if="label" ng-bind="label"></span>
+    <span data-ng-if="label" data-ng-bind="label"></span>
   </label>
 </div>

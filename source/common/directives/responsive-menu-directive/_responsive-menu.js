@@ -18,7 +18,7 @@
    */
   function ResponsiveMenu($window, $timeout) {
     return {
-      restrict: 'E',
+      restrict: 'A',
       scope: {
         anchorClasses: '@',
         menuElements: '='

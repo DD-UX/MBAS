@@ -1,27 +1,27 @@
 <!-- Template for securebox -->
 
-<div class="securebox transition text-xs-center" ng-class="{'clickable': !active}">
+<div class="securebox transition text-xs-center" data-ng-class="{'clickable': !active}">
 
   <!-- Warning -->
-  <div class="warning {{classes}}" ng-if="!active">
+  <div class="warning {{classes}}" data-ng-if="!active">
     <!-- Lock icon -->
     <i class="fa fa-lock fa-5x"></i>
-    <p ng-bind-html="warning"></p>
+    <p data-ng-bind-html="warning"></p>
   </div>
 
   <!-- Plain/HTML text -->
-  <div ng-if="!!active && isText" ng-bind-html="textSource"></div>
+  <div data-ng-if="!!active && isText" data-ng-bind-html="textSource"></div>
 
   <!-- Images -->
-  <img class="full-responsive" ng-if="!!active && isImage" ng-src="{{imageSource}}" alt="{{title}}">
+  <img class="full-responsive" data-ng-if="!!active && isImage" data-ng-src="{{imageSource}}" alt="{{title}}">
 
   <!-- Video -->
-  <video class="full-responsive" ng-if="!!active && isVideo" title="{{title}}" controls>
-    <source ng-repeat="s in videoSource" ng-src="{{s.video}}" type="{{s.type}}"> Your browser does not support video tag.
+  <video class="full-responsive" data-ng-if="!!active && isVideo" title="{{title}}" controls>
+    <source data-ng-repeat="s in videoSource" data-ng-src="{{s.video}}" type="{{s.type}}"> Your browser does not support video tag.
   </video>
 
   <!-- Audio -->
-  <audio class="full-responsive" ng-if="!!active && isAudio" title="{{title}}" controls>
-    <source ng-repeat="s in audioSource" ng-src="{{s.audio}}" type="{{s.type}}"> Your browser does not support audio tag.
+  <audio class="full-responsive" data-ng-if="!!active && isAudio" title="{{title}}" controls>
+    <source data-ng-repeat="s in audioSource" data-ng-src="{{s.audio}}" type="{{s.type}}"> Your browser does not support audio tag.
   </audio>
 </div>

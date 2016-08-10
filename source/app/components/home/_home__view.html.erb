@@ -1,33 +1,33 @@
-<section class="page page--home container">
+<section class="page page--home container-fluid">
   <div class="row">
-    <menu class="col-md-4 hidden-sm-down sidebar" du-spy-context>
+    <menu class="col-lg-3 col-md-4 hidden-sm-down sidebar" data-du-spy-context>
       <ul class="nav nav-pills nav-stacked sticky">
         <li class="nav-item">
-          <a href="#install" du-scrollspy="install" class="transition nav-link" du-smooth-scroll>Install MBAS</a>
+          <a href="#install" data-du-scrollspy="install" class="transition nav-link" data-du-smooth-scroll>Install MBAS</a>
         </li>
         <li class="nav-item">
-          <a href="#middleman" du-scrollspy="middleman" class="transition nav-link" du-smooth-scroll>Middleman 4</a>
+          <a href="#middleman" data-du-scrollspy="middleman" class="transition nav-link" data-du-smooth-scroll>Middleman 4</a>
         </li>
         <li class="nav-item">
-          <a href="#bootstrap" du-scrollspy="bootstrap" class="transition nav-link" du-smooth-scroll>Bootstrap 4</a>
+          <a href="#bootstrap" data-du-scrollspy="bootstrap" class="transition nav-link" data-du-smooth-scroll>Bootstrap 4</a>
         </li>
         <li class="nav-item">
-          <a href="#angular" du-scrollspy="angular" class="transition nav-link" du-smooth-scroll>AngularJS</a>
+          <a href="#angular" data-du-scrollspy="angular" class="transition nav-link" data-du-smooth-scroll>AngularJS</a>
         </li>
         <li class="nav-item">
-          <a href="#sass" du-scrollspy="sass" class="transition nav-link" du-smooth-scroll>Sass</a>
+          <a href="#sass" data-du-scrollspy="sass" class="transition nav-link" data-du-smooth-scroll>Sass</a>
         </li>
       </ul>
     </menu>
-    <div class="col-md-8 col-xs-12">
-      <alert class="clearfix" ng-repeat="alert in welcomeAlerts" type="{{alert.type}}" close="closeAlert($index)">
-        <span ng-bind-html="alert.msg"></span>
+    <div class="col-lg-9 col-md-8 col-xs-12 content">
+      <alert class="clearfix" data-ng-repeat="alert in welcomeAlerts" data-type="{{alert.type}}" data-close="closeAlert($index)">
+        <span data-ng-bind-html="alert.msg"></span>
       </alert>
       <main id="install" class="article">
         <h2 class="main__title">
           <a href="https://github.com/DD-UX/MBAS/" target="_blank">
             MBAS up and running!
-            <img width="64" ng-src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png">
+            <img width="64" data-ng-src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png">
           </a>
         </h2>
         <dl>

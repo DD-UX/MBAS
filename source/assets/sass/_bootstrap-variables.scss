@@ -43,7 +43,7 @@
 ////
 //// Quickly modify global styling by enabling or disabling optional features.
 //
-//$enable-flex:               false;
+$enable-flex:               true;
 //$enable-rounded:            true;
 //$enable-shadows:            false;
 //$enable-gradients:          false;
@@ -343,10 +343,10 @@ $component-active-bg:    get_color('green');
 //$navbar-padding-horizontal:         $spacer;
 //$navbar-padding-vertical:           ($spacer / 2);
 //
-//$navbar-dark-color:                 rgba(255,255,255,.5);
-//$navbar-dark-hover-color:           rgba(255,255,255,.75);
-//$navbar-dark-active-color:          rgba(255,255,255,1);
-//$navbar-dark-disabled-color:        rgba(255,255,255,.25);
+$navbar-dark-color:                 get_color('cream');
+$navbar-dark-hover-color:           get_color('orange');
+$navbar-dark-active-color:          get_color('orange');
+$navbar-dark-disabled-color:        rgba(get_color('cream'),0.5);
 //
 //$navbar-light-color:                rgba(0,0,0,.3);
 //$navbar-light-hover-color:          rgba(0,0,0,.6);

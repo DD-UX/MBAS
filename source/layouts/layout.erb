@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-controller="AppController">
+<html lang="es" data-ng-controller="AppController">
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
     <!-- General meta information -->
     <meta name="description" content="<%= current_page.data.description || "Middleman contains the project starter, Bootstrap 4 powers layouts, Angular handles the data binding, routing and general UX and Sass enhance the developer experience on coding" %>">
 
-    <title ng-bind="pageTitle"><%= current_page.data.title || "MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass" %></title>
+    <title data-ng-bind="pageTitle"><%= current_page.data.title || "MBAS - Middleman 4 + Bootstrap 4 + Angular + Sass" %></title>
 
     <%= stylesheet_link_tag :styles %>
     <%= javascript_include_tag :all %>
@@ -34,10 +34,10 @@
   </head>
 
   <body class="<%= page_classes %>">    
-    <span ng-cloak ui-view="header" ng-hide="$state.current.views.header.controller === null">
+    <span data-ng-cloak ui-view="header" data-ng-hide="$state.current.views.header.controller === null">
       <%= partial "/app/partials/header/_header__view" %>
     </span>
-    <div ng-cloak ui-view="main" autoscroll="true" class="wackyTransition animated">
+    <div data-ng-cloak ui-view="main" autoscroll="true" class="wackyTransition animated">
       <%= yield %>
     </div>
   </body>

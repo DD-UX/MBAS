@@ -1,14 +1,14 @@
 <!-- Template for custom select -->
 
 <div class="custom-select">
-  <select name="{{name}}" ng-disabled="disabledIf" class="form-control" ng-model="selectedOption" ng-options="o.name for o in optionsMap track by o.id"
+  <select name="{{name}}" data-ng-disabled="disabledIf" class="form-control" data-ng-model="selectedOption" data-ng-options="o.name for o in optionsMap track by o.id"
           value="{{o.value}}">
     >
   </select>
-  <div class="decoy-select {{decoyStyles}}" ng-bind="selectedOption.name"></div>
+  <div class="decoy-select {{decoyStyles}}" data-ng-bind="selectedOption.name"></div>
 
-  <div class="carets" ng-if="caretsHtml" ng-bind-html="caretsHtml"></div>
-  <div class="carets" ng-if="!caretsHtml">
+  <div class="carets" data-ng-if="caretsHtml" data-ng-bind-html="caretsHtml"></div>
+  <div class="carets" data-ng-if="!caretsHtml">
     <i class="fa fa-caret-down text__white"></i>
   </div>
 </div>
