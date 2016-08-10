@@ -27,4 +27,4 @@
 .DS_Store
 
 # Ignore Deploy settings
-/source/helpers/deploy-settings.yml
+source/helpers/deploy-settings.yml
