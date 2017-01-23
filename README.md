@@ -1,5 +1,5 @@
 # This project is officialy **closed**.
-After testing Bootstrap 4 I've realized their [flex](http://v4-alpha.getbootstrap.com/getting-started/flexbox/) implementation is very poor, full of flaws and they rely on a [post processor](https://github.com/luisrudge/postcss-flexbugs-fixes) to "solve" those issues. This is why I've decided to move forward and will write another brand new project starter which will probably share those super Sass components I've performed and also updated versions of current directives, updated as Angular 1.5 [Components](https://docs.angularjs.org/guide/component). Thanks everyone!
+At the moment of closing this project and testing Bootstrap 4 I've realized their [flex](http://v4-alpha.getbootstrap.com/getting-started/flexbox/) implementation was very poor, full of flaws and they rely on a [post processor](https://github.com/luisrudge/postcss-flexbugs-fixes) to "solve" those issues. This is why I've decided to move forward and will write another brand new project starter which will probably share those super Sass components I've performed and also updated versions of current directives, updated as Angular 1.5 [Components](https://docs.angularjs.org/guide/component). Hope to work again with Bootstrap if they can solve their issues. Thanks everyone!
 
 
 **Check [MBAS](http://mbas.diegodiazweb.com/) alpha in action!**
