@@ -1,5 +1,13 @@
-# This project is officialy **closed**.
-At the moment of closing this project and testing Bootstrap 4 I've realized their [flex](http://v4-alpha.getbootstrap.com/getting-started/flexbox/) implementation was very poor, full of flaws and they rely on a [post processor](https://github.com/luisrudge/postcss-flexbugs-fixes) to "solve" those issues. This is why I've decided to move forward and will write another brand new project starter which will probably share those super Sass components I've performed and also updated versions of current directives, updated as Angular 1.5 [Components](https://docs.angularjs.org/guide/component). Hope to work again with Bootstrap if they can solve their issues. Thanks everyone!
+# This project is **closed** for the moment.
+When closed this project, testing Bootstrap 4 I've realized their [flex](http://v4-alpha.getbootstrap.com/getting-started/flexbox/) implementation was very poor, full of flaws and they rely on a [post processor](https://github.com/luisrudge/postcss-flexbugs-fixes) to "solve" those issues. 
+
+I've created a brand new boilerplate in Node with a newer Bootstrap 4 where Flexbox issues got solved. I will resume MBAS when have time to update multiple elements. 
+
+In the meantime you awesomely work with [Gulp MEAN](https://github.com/DD-UX/gulp-mean).
+
+Cheers!
+
+DD
 
 
 **Check [MBAS](http://mbas.diegodiazweb.com/) alpha in action!**
